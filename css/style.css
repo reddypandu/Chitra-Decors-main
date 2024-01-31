@@ -427,7 +427,7 @@ button {
 .services_section {
   width: 100%;
   float: left;
-  padding-bottom: 90px;
+  padding-bottom: 45px;
 }
 .services_section 1 {
   width: 100%;
@@ -522,6 +522,15 @@ button {
   padding-bottom: 90px;
   background-image: url(../images/contact-bg.png);
 }
+.about_section1 {
+  width: 100%;
+  float: left;
+  background-color: white;
+  height: auto;
+  padding-bottom: 90px;
+
+  padding-bottom: 90px;
+}
 .image_1 {
   width: 100%;
   float: left;
@@ -554,7 +563,7 @@ button {
   float: left;
   font-size: 18px;
   color: #ffffff;
-  background-color: #070201;
+  background-color: maroon;
   text-align: center;
   padding: 10px 0px;
   border-radius: 5px;
@@ -562,12 +571,12 @@ button {
 }
 .read_bt1 a:hover {
   color: #000;
-  background-color: #ffffff;
+  background-color: orange;
 }
 .furnitures_section {
   width: 100%;
   float: left;
-  padding-bottom: 90px;
+  padding-bottom: 45px;
   /* background-color: cornflowerblue; */
 }
 .furnitures_section1 {
@@ -680,6 +689,19 @@ a:hover {
 
   /* opacity: 0.5; */
   background-color: rgb(219, 169, 70);
+}
+.who_section1 {
+  width: 100%;
+  float: left;
+  height: auto;
+  padding-bottom: 55px;
+  background-size: 100%;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(https://cdn-koccl.nitrocdn.com/MJtVxKyemDvALymLuhPCqurAikADofrp/assets/images/optimized/rev-ee7051a/darpanfurnishings.com/wp-content/uploads/2021/05/vippng.com-stage-curtains-png.png);
+  opacity: 0.9;
+  background-color: whitesmoke;
 }
 .who_taital {
   width: 100%;
@@ -1160,4 +1182,17 @@ textarea#comment::placeholder {
   /* left: 0;
   top: 0;
   position: absolute; */
+}
+.services_taital2 {
+  width: 100%;
+  float: left;
+  font-size: 32px;
+  color: maroon;
+  padding-top: 40px;
+
+  text-decoration: underline;
+  line-height: 1.3em;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 60px;
 }
