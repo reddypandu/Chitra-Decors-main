@@ -433,3 +433,21 @@ function checkCookie() {
     $(".cookies").show();
   }
 }
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  var header = document.getElementById("header_section");
+
+  // Add the "fixed" class to the header when scrolled 200px down
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+  ) {
+    header.classList.add("fixed");
+  } else {
+    // Remove the "fixed" class when scrolled back to the top
+    header.classList.remove("fixed");
+  }
+}

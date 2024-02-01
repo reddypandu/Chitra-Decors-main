@@ -240,8 +240,69 @@ button {
 .navbar-light .navbar-nav .nav-link {
   color: white;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 700;
   text-transform: uppercase;
+}
+.cookies {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 15px 50px;
+  transition: width 0.35s ease-in-out;
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+  color: white;
+}
+
+.cookies a {
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  padding: 6px 16px;
+  border: solid 1px #ffc31d;
+}
+
+.nav-item.drop-down {
+  position: relative;
+}
+
+.nav-item.drop-down .drop-items {
+  position: absolute;
+  padding: 0;
+  background-color: maroon;
+  z-index: 999;
+
+  display: none;
+  margin-left: 20px;
+  transition: 1s ease-in-out;
+}
+
+.nav-item.drop-down .drop-items li {
+  font-size: 16px;
+  padding: 5px 10px;
+  border-bottom: 1px solid white;
+  width: 200px;
+}
+
+.nav-item.drop-down .drop-items li:hover {
+  background-color: #f98d06;
+}
+
+.nav-item.drop-down .drop-items li a {
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.nav-item.drop-down:hover .drop-items {
+  display: block;
+  transition: 1s ease-in-out;
+}
+
+.header_section.fixed {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 998;
 }
 .navbar-nav .open > a,
 .navbar-nav .open > a:hover,
@@ -249,12 +310,14 @@ button {
 .navbar-nav > li > a:hover,
 .navbar-nav > li > a:focus,
 .navbar-nav > li > a.active {
-  background-color: orange !important;
-  border-color: orange !important;
+  background-color: #f98d06 !important;
+  border-color: #f98d06 !important;
   border-radius: 10px;
   color: maroon !important;
 }
-
+.header_section form {
+  margin-right: 5rem !important;
+}
 .navbar-light .navbar-nav .nav-link:focus,
 .navbar-light .navbar-nav .nav-link:hover {
   color: #ffb607;
@@ -346,7 +409,7 @@ button {
   color: rgb(23, 23, 41);
   text-align: center;
   text-transform: uppercase;
-  /* text-shadow: orangered 0px 0.1em 2px; */
+  /* text-shadow: #f98d06red 0px 0.1em 2px; */
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   padding-top: 150px;
   /* margin-left: -82px; */
@@ -383,7 +446,7 @@ button {
 }
 .contact_bt a:hover {
   color: #ffffff;
-  background-color: orange;
+  background-color: #f98d06;
 }
 
 .fa-angle-right:before {
@@ -396,7 +459,7 @@ button {
   position: absolute;
   left: -153px;
   top: 57%;
-  background-color: orange;
+  background-color: #f98d06;
   color: #ffffff;
   border-radius: 100px;
 }
@@ -410,7 +473,7 @@ button {
 #costum_slider .carousel-control-next {
   width: 85px;
   height: 85px;
-  background: orange;
+  background: #f98d06;
   opacity: 1;
   font-size: 30px;
   color: #fff;
@@ -429,7 +492,7 @@ button {
   float: left;
   padding-bottom: 45px;
 }
-.services_section 1 {
+.services_section1 {
   width: 100%;
   float: left;
   padding-bottom: 90px;
@@ -441,8 +504,9 @@ button {
   font-size: 32px;
   color: maroon;
   padding-top: 40px;
-
-  text-decoration: underline;
+  font-weight: 900;
+  /* 
+  text-decoration: underline; */
   line-height: 1.3em;
   text-align: center;
   text-transform: uppercase;
@@ -473,7 +537,7 @@ button {
   width: 100%;
   float: left;
   font-size: 24px;
-  color: orange;
+  color: #f98d06;
   text-transform: uppercase;
   text-align: center;
   padding-top: 20px;
@@ -512,12 +576,12 @@ button {
 }
 .read_bt a:hover {
   color: #ffffff;
-  background-color: orange;
+  background-color: #f98d06;
 }
 .about_section {
   width: 100%;
   float: left;
-  background-color: orange;
+  background-color: #f98d06;
   height: auto;
   padding-bottom: 90px;
   background-image: url(../images/contact-bg.png);
@@ -571,7 +635,7 @@ button {
 }
 .read_bt1 a:hover {
   color: #000;
-  background-color: orange;
+  background-color: #f98d06;
 }
 .furnitures_section {
   width: 100%;
@@ -583,7 +647,7 @@ button {
   width: 100%;
   float: left;
   padding-bottom: 90px;
-  background-color: orange;
+  background-color: #f98d06;
 }
 .our_text {
   width: 100%;
@@ -751,7 +815,7 @@ a:hover {
 }
 .get_bt a:hover {
   color: #000;
-  background-color: orange;
+  background-color: #f98d06;
 }
 .projects_section {
   width: 100%;
@@ -865,7 +929,7 @@ a:hover {
   float: left;
   padding-top: 50px;
   padding-bottom: 90px;
-  background-color: orange;
+  background-color: #f98d06;
   background-image: url(../images/contact-bg.png);
   margin-bottom: 10px;
 }
@@ -1081,9 +1145,10 @@ textarea#comment::placeholder {
 .footer_section {
   width: 100%;
   float: left;
-  background-color: #0f1521;
+  background-color: maroon;
   height: auto;
   padding-bottom: 90px;
+  border-bottom: 2px solid #f98d06;
 }
 .fooer_logo {
   width: 100%;
@@ -1096,6 +1161,7 @@ textarea#comment::placeholder {
   font-size: 24px;
   color: #ffffff;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .footer_lorem_text {
@@ -1111,6 +1177,7 @@ textarea#comment::placeholder {
   font-size: 16px;
   color: #fefefe;
   margin-left: 0px;
+  text-align: center;
 }
 .footer_lorem_text1 a {
   color: white;
@@ -1144,18 +1211,28 @@ textarea#comment::placeholder {
   float: left;
   padding-right: 5px;
 }
-
+.social_icon li i {
+  font-size: 20px;
+  padding: 8px;
+  background-color: #f98d06;
+  color: maroon;
+  border-radius: 10px;
+}
+.social_icon li:hover i {
+  color: maroon;
+  background-color: white;
+}
 .copyright_section {
   width: 100%;
   float: left;
-  background-color: #ffffff;
+  background-color: maroon;
   height: auto;
 }
 
 .copyright_text {
   width: 100%;
   float: left;
-  color: #000;
+  color: white;
   text-align: center;
   font-size: 16px;
   margin-left: 0px;

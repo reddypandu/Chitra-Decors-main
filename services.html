@@ -13,6 +13,29 @@
   <title>Chithra Decors - Services</title>
   <meta name="keywords" content="" />
   <meta name="description" content="" />
+  <!--google Analytics-->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WXXJPLWRFX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-WXXJPLWRFX');
+  </script>
+
+  <meta name="google-site-verification" content="Jpc2Nc5y4dBCeG7hHzrh4k7XOJ4OpeiSx0QVylA7KRU" />
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WGG6HHCB');</script>
+  <!-- End Google Tag Manager -->
   <meta name="author" content="" />
   <!-- bootstrap css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
@@ -38,6 +61,10 @@
 </head>
 
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WGG6HHCB" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <!--whatsup start-->
   <div class="whatsapp">
     <a href="https://wa.me/+9173375 11766"><i class="fa-brands fa-whatsapp"></i></a>
@@ -74,7 +101,7 @@
   </style>
   <!--whatsup end-->
   <!-- header section start -->
-  <div class="header_section">
+  <div class="header_section" id="header_section">
     <div class="container-fluid">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="logo">
@@ -90,13 +117,24 @@
               <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link  active" href="services.html">services</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="about.html">About</a>
             </li>
+
+
+            <li class="nav-item drop-down">
+              <a class="nav-link active" href="services.html">Services</a>
+              <ul class="drop-items">
+                <li><a href="blinds.html" class="link">Blinds</a></li>
+                <li><a href="wallpapers.html" class="link">Wallpapers</a></li>
+                <li><a href="sofas.html" class="link">Sofas</a></li>
+                <li><a href="Puffystools.html" class="link">Puffy Stools</a></li>
+                <li><a href="Luxuryhighchairs.html" class="link">Luxury High Chairs</a></li>
+                <li><a href="Centraltables.html" class="link">Central Tables</a></li>
+                <li><a href="Artificialturfs.html" class="link">Artificial Turfs</a></li>
+              </ul>
+            </li>
             <li class="nav-item">
-              <a class="nav-link" href="shop.html">Shop</a>
+              <a class="nav-link" href="gallery.html">Gallery</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
@@ -104,11 +142,11 @@
           </ul>
           <form class="form-inline mr-5">
             <a href="tel:+9173375 11766">
-              <h1 class="call_text"><i class="fa fa-phone" aria-hidden="true"></i> 73375 11766</h1>
+              <h1 class="call_text">
+                <i class="fa fa-phone" aria-hidden="true"></i> 73375 11766
+              </h1>
             </a>
-
           </form>
-
         </div>
       </nav>
     </div>
@@ -255,20 +293,7 @@
   <!-- services section end -->
   <script>
 
-    function navigateToService(serviceId) {
-      console.log("Navigating to", serviceId);
-      // Hide all services sections
-      var serviceSections = document.querySelectorAll(".services_section");
-      serviceSections.forEach(function (section) {
-        section.style.display = "none";
-      });
 
-      // Show the selected service section
-      var selectedService = document.getElementById(serviceId);
-      if (selectedService) {
-        selectedService.style.display = "block";
-      }
-    }
   </script>
   <!-- footer section start -->
   <div class="footer_section layout_padding">
@@ -287,9 +312,7 @@
           <h1 class="customer_text">LET US HELP YOU</h1>
           <div class="address">
             <div class="">
-
               <img style="height: auto" src="images/location.png" alt="" width="30px" />
-
             </div>
             <div class="footer_para">
               <a class="text-white"
@@ -316,21 +339,14 @@
               <a href="mailto:chithradecors@gmail.com" class="call footer_para">chithradecors.info@gmail.com</a>
             </div>
           </div>
-
-
         </div>
         <div class="col-lg-4 col-sm-6">
           <h1 class="customer_text">INFORMATION</h1>
 
           <div class="footer_lorem_text1">
-            <!-- ~About Us<br />
-            ~ Careers<br />
-            ~ Sell on shopee<br />
-            ~ Press & News<br />
-            ~ Competitions<br />
-            ~ Terms & Conditions -->
+
             <ul>
-              <li><a href="/">Home</a></li>
+              <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About Us</a></li>
               <li><a href="services.html">Services</a></li>
               <li><a href="shop.html">Shop</a></li>
@@ -345,7 +361,6 @@
           </p>
         </div> -->
       </div>
-
     </div>
   </div>
   <!--  footer section end -->
@@ -356,31 +371,43 @@
       <div class="social_icon">
         <ul>
           <li>
-            <a href="#"><img style="height: auto" src="images/fb-icon.png" /></a>
+            <a href="#">
+              <!-- <img style="height: auto" src="images/fb-icon.png" /> -->
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
           </li>
           <li>
-            <a href="#"><img style="height: auto" src="images/twitter-icon.png" /></a>
+            <a href="#">
+              <!-- <img style="height: auto" src="images/twitter-icon.png" /> -->
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
           </li>
           <li>
-            <a href="https://www.instagram.com/chithradecors/"><img style="height: auto"
-                src="images/instagram-icon.png" /></a>
+            <a href="https://www.instagram.com/chithradecors/">
+              <!-- <img style="height: auto"
+                src="images/instagram-icon.png" /> -->
+              <i class="fa-brands fa-instagram"></i>
+            </a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/ronak-singh-68a10a2b0/"><img style="height: auto"
-                src="images/linkedin-icon.png" /></a>
+            <a href="https://www.linkedin.com/in/ronak-singh-68a10a2b0/">
+              <!-- <img style="height: auto"
+                src="images/linkedin-icon.png" /> -->
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
           </li>
         </ul>
       </div>
     </div>
-    <p class="copyright_text">©
+    <p class="copyright_text">
+      ©
       <script>
         document.write(new Date().getFullYear());
-      </script> Chithra Decors
-      All Rights Reserved. Design by
-      <a href="https://thepatternscompany.com" target="_blank" style="color: green">THE PATTERNS COMPANY</a>
+      </script>
+      Chithra Decors All Rights Reserved. Design by
+      <a href="https://thepatternscompany.com" target="_blank" style="color: #7ed958">THE PATTERNS COMPANY</a>
     </p>
   </div>
-
   <!-- copyright section end -->
   <!-- Javascript files-->
   <script src="js/jquery.min.js"></script>
