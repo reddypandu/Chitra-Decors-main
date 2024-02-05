@@ -1247,7 +1247,7 @@ textarea#comment::placeholder {
   margin-left: 0px;
 }
 .copyright_text a {
-  color: green;
+  color: black !important;
   font-weight: 600;
 }
 .copyright_text a:hover {

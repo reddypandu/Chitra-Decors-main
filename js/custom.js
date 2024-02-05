@@ -451,3 +451,10 @@ function scrollFunction() {
     header.classList.remove("fixed");
   }
 }
+
+const year = document.getElementById("year");
+
+let date = new Date();
+let yearNow = date.getFullYear();
+
+year.textContent = yearNow;
