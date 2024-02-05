@@ -455,34 +455,33 @@ button {
 .fa-angle-left:before {
   content: "\f105";
 }
-#costum_slider a.carousel-control-prev {
+#costum_slider a.carousel-control-prev i {
   position: absolute;
-  left: -153px;
-  top: 57%;
+  left: 0px;
+  top: 50%;
   background-color: #f98d06;
   color: #ffffff;
-  border-radius: 100px;
+  border-radius: 50%;
 }
 
-#costum_slider a.carousel-control-next {
+#costum_slider a.carousel-control-next i {
   position: absolute;
-  right: -150px;
-  top: 57%;
+  right: 0px;
+  top: 50%;
 }
-#costum_slider .carousel-control-prev,
-#costum_slider .carousel-control-next {
-  width: 85px;
-  height: 85px;
+#costum_slider .carousel-control-prev i,
+#costum_slider .carousel-control-next i {
   background: #f98d06;
   opacity: 1;
-  font-size: 30px;
+  font-size: 20px;
   color: #fff;
-  border-radius: 100px;
+  padding: 5px;
+  border-radius: 50%;
 }
-#costum_slider .carousel-control-prev:hover,
-#costum_slider .carousel-control-next:hover,
-#costum_slider .carousel-control-prev:focus,
-#costum_slider .carousel-control-next:focus {
+#costum_slider .carousel-control-prev i:hover,
+#costum_slider .carousel-control-next i:hover,
+#costum_slider .carousel-control-prev i:focus,
+#costum_slider .carousel-control-next i:focus {
   background: #f8ca12;
   color: #fff;
 }
