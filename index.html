@@ -28,7 +28,29 @@
 
     gtag('config', 'G-WXXJPLWRFX');
   </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11352042064"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
+    gtag('config', 'AW-11352042064');
+  </script>
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof (url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-11352042064/gH1HCN2FqJEZENDUiaUq',
+        'event_callback': callback
+      });
+      return false;
+    }
+  </script>
   <meta name="google-site-verification" content="Jpc2Nc5y4dBCeG7hHzrh4k7XOJ4OpeiSx0QVylA7KRU" />
 
   <!-- Google Tag Manager -->
@@ -49,8 +71,7 @@
   <link rel="stylesheet" type="text/css" href="css/style.css" />
   <!-- Responsive-->
   <link rel="stylesheet" href="css/responsive.css" />
-  <!-- fevicon -->
-  <link rel="icon" href="images/fevicon.png" type="image/gif" />
+
   <!-- Scrollbar Custom CSS -->
   <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" />
   <!-- Tweaks for older IEs-->
@@ -127,9 +148,22 @@
 
 
             <li class="nav-item drop-down">
-              <a class="nav-link" href="services.html">Services</a>
+              <a class="nav-link" href="services.html">
+                <div>Services <span style="" class="d">&#11167;
+                  </span></div>
+              </a>
               <ul class="drop-items">
-                <li><a href="blinds.html" class="link">Blinds</a></li>
+                <li class="drop-down1"><a href="blinds.html" class="link">Blinds <span
+                      style="float: right;">&#62;</span>
+                  </a>
+
+                  <ul class="drop-items1">
+                    <li><a href="./blinds/roller-blinds.html">Roller Blinds</a></li>
+                    <li><a href="./blinds/roman-blinds.html">Roman Blinds</a></li>
+                    <li><a href="./blinds/zebra-blinds.html">Zebra Blinds</a></li>
+                  </ul>
+
+                </li>
                 <li><a href="wallpapers.html" class="link">Wallpapers</a></li>
                 <li><a href="sofas.html" class="link">Sofas</a></li>
                 <li><a href="Puffystools.html" class="link">Puffy Stools</a></li>
@@ -157,9 +191,76 @@
     </div>
   </div>
   <style>
+    li.drop-down .d {
+      border-width: 10px;
+      border-radius: 10px;
+      border-color: red;
+    }
 
+    li.drop-down1 {
+      position: relative;
+    }
+
+    li.drop-down1 .drop-items1 {
+      position: absolute;
+      padding: 0;
+      background-color: maroon;
+      z-index: 999;
+      top: 0;
+      left: 100%;
+      display: none;
+      transition: 1s ease-in-out;
+    }
+
+    li.drop-down1 .drop-items1 li {
+      font-size: 16px;
+      padding: 5px 10px;
+      border-bottom: 1px solid white;
+      width: 200px;
+    }
+
+    li.drop-down1 .drop-items1 li:hover {
+      background-color: #f98d06;
+    }
+
+    li.drop-down1 .drop-items1 li a {
+      color: white;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    /* li.drop-down1:hover .drop-items1 {
+      display: block;
+      transition: 1s ease-in-out;
+    } */
+    li.drop-down1.active .drop-items1 {
+      display: block;
+      transition: 1s ease-in-out;
+    }
+
+    @media(max-width:500px) {
+      li.drop-down1 .drop-items1 {
+        display: none;
+      }
+    }
   </style>
   <script>
+    const btn1 = document.querySelector("li.drop-down1")
+    const open1 = document.querySelector("li.drop-down1 .drop-items1")
+
+
+
+    btn1.addEventListener("click", () => {
+      btn1.classList.toggle("active")
+    })
+
+
+    // const btn = document.querySelector("li.drop-down")
+    // const open = document.querySelector("li.drop-down .drop-items")
+
+    // btn.addEventListener("click", () => {
+    //   open.style.display = "block";
+    // })
 
   </script>
   <div class="cookies">

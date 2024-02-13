@@ -23,7 +23,31 @@
 
     gtag('config', 'G-WXXJPLWRFX');
   </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11352042064"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
+    gtag('config', 'AW-11352042064');
+  </script>
+  <!-- Event snippet for Contact Form conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof (url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-11352042064/gH1HCN2FqJEZENDUiaUq',
+        'event_callback': callback
+      });
+      return false;
+    }
+  </script>
   <meta name="google-site-verification" content="Jpc2Nc5y4dBCeG7hHzrh4k7XOJ4OpeiSx0QVylA7KRU" />
 
   <!-- Google Tag Manager -->
@@ -166,45 +190,90 @@
         <div class="col-md-6">
           <h1 class="contact_text">CONTACT US</h1>
           <div class="mail_sectin">
-            <!-- <form id="bookingForm" class="bookingForm">
-              <input type="text" class="email-bt" placeholder="Name" required id="fullName" />
-              <input type="email" class="email-bt" placeholder="Email" id="mail" required />
-              <input type="tel" class="email-bt" placeholder="Phone Number" pattern="[0-9]{10}" maxlength="10"
-                title="Please enter a 10-digit numeric phone number" required id="number" />
 
-              <textarea class="massage-bt" id="message" placeholder="Message" rows="5" id="message"></textarea>
-              <input type="submit" class="send_bt" value="SUBMIT" />
-            </form> -->
-            <!-- <form id="bookingForm" class="row" name="contactform" method="post">
-              <input type="text" name="name" id="name" class="email-bt" placeholder="Enter Name">
-              <input type="email" name="email" id="email" class="email-bt" placeholder="Your Email" required>
-              <input type="text" name="phone" id="phone" class="email-bt" placeholder="Phone Number" required>
-              <textarea class="massage-bt" name="comments" id="message" rows="6"
-                placeholder="Give us more details.."></textarea>
-              <button type="submit" value="SEND" class="send_bt">Register</button>
-              <p id="thank" style="display: none;color: green;padding: 5px;">Thank You For Registration!
-                We Will Get to
-                Back You Soon.!
-              </p>
-            </form> -->
             <div id="message"></div>
             <form id="bookingForm" class="row" name="contactform" method="post">
               <fieldset class="row-fluid">
-                <input type="text" name="first_name" id="first_name" class="email-bt" placeholder="First Name"
-                  required />
+                <input type="text" name="first_name" id="name" class="email-bt" placeholder="First Name" required />
 
-                <input type="email" name="email" id="email" class="email-bt" placeholder="Your Email" required />
+                <input type="email" name="email" id="mail" class="email-bt" placeholder="Your Email" required />
 
-                <input type="text" name="phone" id="phone" class="email-bt" placeholder="Phone Number" required />
+                <input type="text" name="phone" id="number" class="email-bt" placeholder="Phone Number" required />
+                <div class="dropdown-sel">
+                  <span id="selectedCar" class="product">Choose a Category</span>
+                  <ul id="carList" required class="dropdown-content">
+                    <li value="Blinds active">Blinds</li>
+                    <li value="Sofas">Sofas</li>
+                    <li value="Turfs">Turfs</li>
+                    <li value="Chairs">Chairs</li>
+                    <li value="Tables">Tables</li>
+                    <li value="Stools">Stools</li>
+                    <li value="Wallpapers">Wallpapers</li>
+                  </ul>
+                </div>
+                <style>
+                  /* Add some basic styling for the dropdown */
+                  .dropdown-sel {
+                    position: relative;
+                    display: inline-block;
+                    background-color: white;
+                    width: 100%;
+                    height: 55px;
+                    font-size: 18px;
+                    padding: 20px;
+                    margin-top: 25px;
+                    border: 0px;
+                    border-radius: 5px;
+                  }
 
+                  .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    background-color: #f9f9f9;
+                    min-width: 160px;
+                    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                    padding: 12px;
+                    z-index: 1;
+                  }
+
+                  .dropdown-sel:hover .dropdown-content {
+                    display: block;
+                  }
+
+                  .dropdown-content li {
+                    list-style: none;
+                    padding: 8px;
+                    cursor: pointer;
+                  }
+
+                  .dropdown-content li:hover {
+                    background-color: #ddd;
+                  }
+                </style>
+                <script>
+                  document.addEventListener('DOMContentLoaded', function () {
+                    // Get the elements
+                    var selectedCarElement = document.getElementById('selectedCar');
+                    var carList = document.getElementById('carList');
+
+                    // Add a click event listener to each li element
+                    var carItems = carList.getElementsByTagName('li');
+                    for (var i = 0; i < carItems.length; i++) {
+                      carItems[i].addEventListener('click', function () {
+                        // Set the selected car text
+                        selectedCarElement.textContent = this.textContent;
+                      });
+                    }
+                  });
+                </script>
                 <textarea class="massage-bt" name="comments" id="comments" rows="6"
                   placeholder="Give us more details.."></textarea>
 
                 <button type="submit" value="SEND" class="send_bt">
-                  Register
+                  Submit
                 </button>
               </fieldset>
-              <p id="thank" style="display: none; color: green; padding: 5px">
+              <p id="thankYouMessage" style="display: none; color: green; padding: 5px">
                 Thank You For Registration! We Will Get to Back You Soon.!
               </p>
             </form>
@@ -375,72 +444,45 @@
 
   <script>
     //book appointment
+    document.getElementById("bookingForm").addEventListener("submit", function (event) {
+      event.preventDefault();
 
-    document
-      .getElementById("bookingForm")
-      .addEventListener("submit", function (event) {
-        event.preventDefault();
+      var fullName = document.getElementById("name").value;
+      var email = document.getElementById("mail").value;
 
-        var fisrtName = document.getElementById("first_name").value;
-        var email = document.getElementById("email").value;
-        var number = document.getElementById("phone").value;
-        var message = document.getElementById("comments").value;
-        // console.log("date==>", date);
-        // console.log("time==>", time);
-        var contact = "+9173375 11766";
 
-        var encodedMessage = encodeURIComponent(
-          "First Name: " +
-          fisrtName +
-          "\n" +
-          "Email: " +
-          email +
-          "\n" +
-          "Phone Number: " +
-          number +
-          "\n" +
-          "Message: " +
-          message
-        );
+      var number = document.getElementById("number").value;
+      var comment = document.getElementById("comments").value;
+      var service = document.getElementById("selectedCar").textContent;
+      var contact = "+917337511766";
 
-        // Check if user is on a mobile device
-        if (
-          /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-            navigator.userAgent
-          )
-        ) {
-          // Mobile device, open WhatsApp
-          var whatsappLink = `whatsapp://send?phone=${contact}&text=${encodedMessage}`;
-          window.open(whatsappLink, "_blank");
-        } else {
-          // Desktop device, open default email client
-          emailjs
-            .send("service_noaym1s", "template_rtvpcgm", {
-              from_name: `${fisrtName}`,
-              to_name: "Chithra Decors",
-              message: ` 
-                    Name : ${fisrtName} 
-                    Email : ${email}
-                    Phone Number : ${number}
-                   
-                    More details: ${message}
-                    Reply to ${email}`,
-              reply_to: email,
-            })
-            .then(
-              function (response) {
-                // alert("Mail Sent");
-                document.getElementById("thank").style.display = "block";
-                console.log("response==>", response);
-                // You can redirect or perform other actions after successful email sending
-              },
-              function (error) {
-                alert("Error Sending Mail");
-                console.log("error==>", error);
-              }
-            );
-        }
-      });
+      var encodedMessage = encodeURIComponent(
+        "Name: " +
+        fullName +
+        "\n" +
+        "Email: " +
+        email +
+        "\n" +
+        "Number: " +
+        number +
+        "\n" +
+
+        "Product: " +
+        service +
+        "\n" +
+        "Message: " +
+        comment
+      );
+
+      // Mobile device, open WhatsApp
+      var whatsappLink = `https://wa.me/${contact}?text=${encodedMessage}`;
+      window.open(whatsappLink, "_blank");
+      gtag_report_conversion(whatsappLink, "_blank");
+      // Additional: You can reset the form and show a thank you message if needed
+      document.getElementById("thankYouMessage").style.display = "block";
+      document.getElementById("bookingForm").reset();
+
+    });
   </script>
 </body>
 
