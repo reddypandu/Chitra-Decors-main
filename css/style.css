@@ -336,10 +336,10 @@ li.drop-down1 .drop-items1 li a {
   text-transform: uppercase;
 }
 
-/* li.drop-down1:hover .drop-items1 {
+li.drop-down1:hover .drop-items1 {
   display: block;
   transition: 1s ease-in-out;
-} */
+}
 li.drop-down1.active .drop-items1 {
   display: block;
   transition: 1s ease-in-out;
