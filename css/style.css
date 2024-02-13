@@ -229,6 +229,7 @@ button {
   height: auto;
   background-size: 100%;
   background-color: maroon;
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.644);
 }
 .bg-light {
   background-color: transparent !important;
@@ -440,10 +441,40 @@ li.drop-down1.active .drop-items1 {
   background-size: 100%;
   background-repeat: no-repeat;
 }
+.whatsapp {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 999;
+}
+
+.whatsapp a i {
+  color: white;
+  font-size: 35px;
+  background-color: green;
+  border-radius: 50%;
+  padding: 10px;
+  animation: wh 2s linear infinite;
+  box-shadow: 2px 3px 4px white;
+}
+
+@keyframes wh {
+  0%,
+  100% {
+    transform: scale(0.9);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
 .icon_1 {
   width: 100%;
   float: left;
   text-align: center;
+}
+.services_taital .services_section2 .icon_1 img {
+  width: 100%;
 }
 .icon_2 {
   width: 100%;
@@ -456,8 +487,8 @@ li.drop-down1.active .drop-items1 {
 .furniture_text {
   width: 100%;
   float: left;
-  font-size: 80px;
-  color: rgb(23, 23, 41);
+  font-size: 60px;
+  color: #d32618;
   text-align: center;
   text-transform: uppercase;
   /* text-shadow: #f98d06red 0px 0.1em 2px; */
@@ -468,8 +499,9 @@ li.drop-down1.active .drop-items1 {
 .there_text {
   width: 50%;
   margin: 0 auto;
+  margin-top: 20px;
   font-size: 20px;
-  color: maroon;
+  color: #f98d06;
   text-align: center;
   font-family: Georgia, "Times New Roman", Times, serif;
   /* margin-left: 200px; */
@@ -489,7 +521,7 @@ li.drop-down1.active .drop-items1 {
   float: left;
   font-size: 18px;
   color: #ffffff;
-  background-color: maroon;
+  background-color: #d32618;
   text-align: center;
   padding: 10px 0px;
   border-radius: 5px;
@@ -552,7 +584,7 @@ li.drop-down1.active .drop-items1 {
   width: 100%;
   float: left;
   font-size: 32px;
-  color: maroon;
+  color: #d32618;
   padding-top: 40px;
   font-weight: 900;
   /* 
@@ -598,7 +630,7 @@ li.drop-down1.active .drop-items1 {
   float: left;
   font-size: 16px;
   color: #090808;
-  text-align: center;
+  /* text-align: center; */
   margin-left: 0px;
   margin-top: 10px;
 }
@@ -618,7 +650,7 @@ li.drop-down1.active .drop-items1 {
   float: left;
   font-size: 18px;
   color: #ffffff;
-  background-color: maroon;
+  background-color: #d32618;
   text-align: center;
   padding: 10px 0px;
   border-radius: 5px;
@@ -654,7 +686,7 @@ li.drop-down1.active .drop-items1 {
   width: 100%;
   float: left;
   font-size: 28px;
-  color: maroon;
+  color: #d32618;
   text-transform: uppercase;
   /* font-weight: 400; */
   font-family: "Playfair Display", Sans-serif !important;
@@ -677,7 +709,7 @@ li.drop-down1.active .drop-items1 {
   float: left;
   font-size: 18px;
   color: #ffffff;
-  background-color: maroon;
+  background-color: #d32618;
   text-align: center;
   padding: 10px 0px;
   border-radius: 5px;
@@ -703,7 +735,7 @@ li.drop-down1.active .drop-items1 {
   width: 100%;
   float: left;
   font-size: 32px;
-  color: maroon;
+  color: #d32618;
   text-transform: uppercase;
   text-align: center;
   text-decoration: underline;
@@ -725,7 +757,12 @@ li.drop-down1.active .drop-items1 {
   margin-bottom: 5px;
   border: 1px solid white;
 }
+.furnitures_section2 .t {
+  text-align: center;
+}
 .furnitures_section2 a {
+  background-color: #d32618;
+  padding: 5px 10px;
   color: white;
 }
 .furnitures_section2 .container_main {
@@ -833,7 +870,7 @@ a:hover {
   width: 100%;
   float: left;
   font-size: 32px;
-  color: maroon;
+  color: #d32618;
   text-align: center;
   text-transform: uppercase;
   font-weight: 500;
@@ -869,7 +906,7 @@ a:hover {
   float: left;
   font-size: 18px;
   color: #ffffff;
-  background-color: maroon;
+  background-color: #d32618;
   text-align: center;
   padding: 10px 0px;
   border-radius: 5px;
@@ -1003,7 +1040,7 @@ a:hover {
   width: 100%;
   float: left;
   font-size: 32px;
-  color: maroon;
+  color: #d32618;
   text-transform: uppercase;
   text-align: center;
   text-decoration: underline;
@@ -1101,7 +1138,7 @@ a:hover {
   width: 100%;
   float: left;
   font-size: 36px;
-  color: maroon;
+  color: #d32618;
 }
 .email-bt {
   color: #989696;
