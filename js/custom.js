@@ -458,3 +458,10 @@ let date = new Date();
 let yearNow = date.getFullYear();
 
 year.textContent = yearNow;
+
+const btn1 = document.querySelector("li.drop-down1");
+const open1 = document.querySelector("li.drop-down1 .drop-items1");
+
+btn1.addEventListener("click", () => {
+  btn1.classList.toggle("active");
+});
