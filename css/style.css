@@ -326,30 +326,117 @@ li.drop-down1 .drop-items1 li {
   width: 200px;
 }
 
-li.drop-down1 .drop-items1 li:hover {
+.drop-down1 .drop-items1 li:hover {
   background-color: #f98d06;
 }
 
-li.drop-down1 .drop-items1 li a {
+.drop-down1 .drop-items1 li .link {
   color: white;
   font-weight: 600;
   text-transform: uppercase;
 }
 
-li.drop-down1:hover .drop-items1 {
+.drop-down1:hover .drop-items1 {
   display: block;
   transition: 1s ease-in-out;
 }
-li.drop-down1.active .drop-items1 {
+.drop-down1.active .drop-items1 {
   display: block;
   transition: 1s ease-in-out;
+}
+.d-plus {
+  display: none;
 }
 
-@media (max-width: 500px) {
-  li.drop-down1 .drop-items1 {
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav :hover > .nav-link {
+  color: white !important;
+  background-color: #f98d06;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#navbarSupportedContent > ul > li.nav-item.drop-down > div.active {
+  background-color: #f98d06;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#navbarSupportedContent
+  > ul
+  > li.nav-item.drop-down
+  > ul
+  > li.drop-down1
+  > div {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+}
+.navbar-light .navbar-nav .nav-link.active {
+  color: white !important;
+}
+@media (max-width: 992px) {
+  .d-plus {
+    display: block;
+    float: right;
+  }
+
+  .d-arrow {
     display: none;
   }
+
+  li.drop-down1 .drop-items1 li:hover {
+    background-color: unset;
+  }
+
+  li.drop-down1 .drop-items1 {
+    position: unset;
+    background-color: #d32618;
+  }
+
+  .li.drop-down1 .drop-items1 li {
+    width: 100%;
+  }
+
+  .nav-item.drop-down .drop-items li {
+    width: 100%;
+  }
+
+  .nav-item.drop-down .drop-items {
+    position: unset;
+    background-color: #f98d06;
+  }
+
+  .nav-item.drop-down .drop-items li:hover {
+    background-color: unset;
+  }
+
+  li.drop-down1:hover .drop-items1 {
+    display: none;
+  }
+
+  .nav-item.drop-down:hover .drop-items {
+    display: none;
+  }
+
+  li.drop-down1.active .drop-items1 {
+    display: block;
+    transition: 1s ease-in-out;
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link {
+    border-bottom: 1px solid white;
+  }
+
+  .nav-item.drop-down.active .drop-items {
+    display: block;
+    transition: 1s ease-in-out;
+  }
 }
+/* @media (max-width: 500px) {
+  .drop-down1 .drop-items1 {
+    display: none;
+  }
+} */
 .header_section.fixed {
   position: fixed;
   left: 0;

@@ -465,3 +465,14 @@ year.textContent = yearNow;
 //     btn1.addEventListener("click", () => {
 //       btn1.classList.toggle("active")
 //     })
+const btn = document.querySelector(".nav-item.drop-down");
+const btn2 = document.querySelector(".nav-link");
+btn.addEventListener("click", () => {
+  btn.classList.toggle("active");
+  btn2.classList.remove("active");
+});
+const btn1 = document.querySelector("li.drop-down1");
+btn1.addEventListener("click", () => {
+  btn1.classList.toggle("active");
+  btn.classList.remove("active");
+});

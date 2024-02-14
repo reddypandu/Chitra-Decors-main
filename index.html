@@ -66,19 +66,19 @@
 
 
   <!-- bootstrap css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
   <!-- style css -->
-  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="./css/style.css" />
   <!-- Responsive-->
-  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="./css/responsive.css" />
 
   <!-- Scrollbar Custom CSS -->
-  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" />
+  <link rel="stylesheet" href="./css/jquery.mCustomScrollbar.min.css" />
   <!-- Tweaks for older IEs-->
   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
   <!-- owl stylesheets -->
-  <link rel="stylesheet" href="css/owl.carousel.min.css" />
-  <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="./css/owl.theme.default.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
     media="screen" />
 
@@ -131,7 +131,7 @@
     <div class="container-fluid">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="logo">
-          <a href="/"><img src="images/logo.png" alt="Chithra Decors" /></a>
+          <a href="/"><img src="./images/logo.png" alt="Chithra Decors" /></a>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -143,41 +143,43 @@
               <a class="nav-link active" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+              <a class="nav-link" href="./about.html">About</a>
             </li>
 
 
             <li class="nav-item drop-down">
 
-              <div class="nav-link">Services <span style="" class="d-plus">&plus;
-                </span> <span style="" class="d-arrow">&#11167;
+              <div class="nav-link">Services <span class="d-plus">&plus;
+                </span> <span class="d-arrow">&#11167;
                 </span></div>
 
               <ul class="drop-items">
-                <li class="drop-down1"><a href="blinds.html" class="link">Blinds <span
-                      style="float: right;">&#62;</span>
-                  </a>
+                <li class="drop-down1">
+                  <div class="link">Blinds <span style="float: right;" class="d-arrow">&#62;</span><span
+                      class="d-plus">&plus;
+                    </span>
+                  </div>
 
                   <ul class="drop-items1">
-                    <li><a href="./blinds/roller-blinds.html">Roller Blinds</a></li>
-                    <li><a href="./blinds/roman-blinds.html">Roman Blinds</a></li>
-                    <li><a href="./blinds/zebra-blinds.html">Zebra Blinds</a></li>
+                    <li><a class="link" href="./blinds/roller-blinds.html">Roller Blinds</a></li>
+                    <li><a class="link" href="./blinds/roman-blinds.html">Roman Blinds</a></li>
+                    <li><a class="link" href="./blinds/zebra-blinds.html">Zebra Blinds</a></li>
                   </ul>
 
                 </li>
-                <li><a href="wallpapers.html" class="link">Wallpapers</a></li>
-                <li><a href="sofas.html" class="link">Sofas</a></li>
-                <li><a href="Puffystools.html" class="link">Puffy Stools</a></li>
-                <li><a href="Luxuryhighchairs.html" class="link">Luxury High Chairs</a></li>
-                <li><a href="Centraltables.html" class="link">Central Tables</a></li>
-                <li><a href="Artificialturfs.html" class="link">Artificial Turfs</a></li>
+                <li><a href="./wallpapers.html" class="link">Wallpapers</a></li>
+                <li><a href="./sofas.html" class="link">Sofas</a></li>
+                <li><a href="./Puffystools.html" class="link">Puffy Stools</a></li>
+                <li><a href="./Luxuryhighchairs.html" class="link">Luxury High Chairs</a></li>
+                <li><a href="./Centraltables.html" class="link">Central Tables</a></li>
+                <li><a href="./Artificialturfs.html" class="link">Artificial Turfs</a></li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="gallery.html">Gallery</a>
+              <a class="nav-link" href="./gallery.html">Gallery</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link" href="./contact.html">Contact</a>
             </li>
           </ul>
           <form class="form-inline mr-5">
@@ -192,50 +194,10 @@
     </div>
   </div>
   <style>
-    .d-plus {
-      display: none;
-    }
 
-    @media(max-width:992px) {
-      .d-plus {
-        display: block;
-        float: right;
-      }
-
-      .d-arrow {
-        display: none;
-      }
-
-      li.drop-down1 .drop-items1 li:hover {
-        background-color: #f98d06;
-      }
-
-      li.drop-down1 .drop-items1 {
-        position: unset;
-
-      }
-
-      .nav-item.drop-down .drop-items {
-        position: unset;
-
-      }
-
-      .nav-item.drop-down .drop-items li:hover {
-        background-color: #f98d06;
-      }
-
-      li.drop-down1.active .drop-items1 {
-        display: block;
-        transition: 1s ease-in-out;
-      }
-
-      .nav-item.drop-down.active .drop-items {
-        display: block;
-        transition: 1s ease-in-out;
-      }
-    }
   </style>
   <script>
+
 
   </script>
   <div class="cookies">
