@@ -1538,7 +1538,11 @@ textarea#comment::placeholder {
   background-color: maroon;
   height: auto;
 }
-
+.testi1,
+.testi2,
+.testi3 {
+  color: #000;
+}
 .copyright_text {
   width: 100%;
   float: left;
