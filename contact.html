@@ -178,6 +178,9 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                 <li><a href="./Luxuryhighchairs.html" class="link">Luxury High Chairs</a></li>
                 <li><a href="./Centraltables.html" class="link">Central Tables</a></li>
                 <li><a href="./Artificialturfs.html" class="link">Artificial Turfs</a></li>
+                <li><a href="./curtains.html" class="link">Curtains</a></li>
+                <li><a href="./head-boards.html" class="link">head Boards</a></li>
+                <li><a href="./longers.html" class="link">Longers</a></li>
               </ul>
             </li>
             <li class="nav-item">
@@ -229,58 +232,9 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                 </div>
                 <style>
                   /* Add some basic styling for the dropdown */
-                  .dropdown-sel {
-                    position: relative;
-                    display: inline-block;
-                    background-color: white;
-                    width: 100%;
-                    height: 55px;
-                    font-size: 18px;
-                    padding: 20px;
-                    margin-top: 25px;
-                    border: 0px;
-                    border-radius: 5px;
-                  }
-
-                  .dropdown-content {
-                    display: none;
-                    position: absolute;
-                    background-color: #f9f9f9;
-                    min-width: 160px;
-                    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-                    padding: 12px;
-                    z-index: 1;
-                  }
-
-                  .dropdown-sel:hover .dropdown-content {
-                    display: block;
-                  }
-
-                  .dropdown-content li {
-                    list-style: none;
-                    padding: 8px;
-                    cursor: pointer;
-                  }
-
-                  .dropdown-content li:hover {
-                    background-color: #ddd;
-                  }
                 </style>
                 <script>
-                  document.addEventListener('DOMContentLoaded', function () {
-                    // Get the elements
-                    var selectedCarElement = document.getElementById('selectedCar');
-                    var carList = document.getElementById('carList');
 
-                    // Add a click event listener to each li element
-                    var carItems = carList.getElementsByTagName('li');
-                    for (var i = 0; i < carItems.length; i++) {
-                      carItems[i].addEventListener('click', function () {
-                        // Set the selected car text
-                        selectedCarElement.textContent = this.textContent;
-                      });
-                    }
-                  });
                 </script>
                 <textarea class="massage-bt" name="comments" id="comments" rows="6"
                   placeholder="Give us more details.."></textarea>
@@ -409,8 +363,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
       <div class="social_icon">
         <ul>
           <li>
-            <a href="#">
-              <!-- <img style="height: auto" src="images/fb-icon.png" /> -->
+            <a href="https://www.facebook.com/profile.php?id=61555984509968">
               <i class="fa-brands fa-facebook-f"></i>
             </a>
           </li>
@@ -493,7 +446,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
       // Mobile device, open WhatsApp
       var whatsappLink = `https://wa.me/${contact}?text=${encodedMessage}`;
       window.open(whatsappLink, "_blank");
-      gtag_report_conversion(whatsappLink, "_blank");
+      // gtag_report_conversion(whatsappLink, "_blank");
       // Additional: You can reset the form and show a thank you message if needed
       document.getElementById("thankYouMessage").style.display = "block";
       document.getElementById("bookingForm").reset();

