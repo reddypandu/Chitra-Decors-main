@@ -208,6 +208,9 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
     </div>
   </div>
   <!-- header section end -->
+
+
+
   <!-- contact section start -->
   <div class="contact_section layout_padding">
     <div class="container">
@@ -215,6 +218,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
         <div class="col-md-6">
           <h1 class="contact_text">CONTACT US</h1>
           <div class="mail_sectin">
+
 
             <div id="message"></div>
             <form id="bookingForm" class="row" name="contactform" method="post">
@@ -225,7 +229,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
                 <input type="text" name="phone" id="number" class="email-bt" placeholder="Phone Number" required />
                 <div class="dropdown-sel">
-                  <span id="selectedCar" class="product">Choose a Category</span>
+                  <span id="selectedCatogery" class="product">Choose a Category</span>
                   <ul id="carList" required class="dropdown-content">
                     <li value="Blinds active">Blinds</li>
                     <li value="Sofas">Sofas</li>
@@ -236,12 +240,8 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     <li value="Wallpapers">Wallpapers</li>
                   </ul>
                 </div>
-                <style>
-                  /* Add some basic styling for the dropdown */
-                </style>
-                <script>
 
-                </script>
+
                 <textarea class="massage-bt" name="comments" id="comments" rows="6"
                   placeholder="Give us more details.."></textarea>
 
@@ -263,7 +263,8 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
       </div>
     </div>
   </div>
-  <!--contact section end-->
+
+
   <!-- Contact style start -->
   <div class="who_section1 layout_padding">
     <div class="container">
@@ -430,7 +431,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
       var number = document.getElementById("number").value;
       var comment = document.getElementById("comments").value;
-      var service = document.getElementById("selectedCar").textContent;
+      var service = document.getElementById("selectedCatogery").textContent;
       var contact = "+917337511766";
 
       var encodedMessage = encodeURIComponent(

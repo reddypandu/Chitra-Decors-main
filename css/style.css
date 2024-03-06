@@ -559,6 +559,25 @@ li.drop-down1 .drop-items1 li {
   box-shadow: 2px 3px 4px #d32618;
 }
 
+#selectedOption {
+  cursor: pointer;
+}
+
+#dropdownOptions {
+  background-color: #d73b2f;
+  z-index: 999 !important;
+  position: absolute;
+  display: none;
+  width: 100%;
+  padding: 0 !important;
+}
+
+#dropdownOptions li {
+  padding: 5px 10px;
+  color: white;
+  cursor: pointer;
+  border-bottom: 1px solid white;
+}
 @keyframes round {
   0%,
   100% {
