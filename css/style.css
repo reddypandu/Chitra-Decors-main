@@ -42,7 +42,7 @@ body {
   color: #666666;
   font-size: 14px;
   font-family: Poppins;
-  line-height: 1.80857;
+    line-height: 1.80857;
   font-weight: normal;
   overflow-x: hidden;
 }
@@ -446,6 +446,7 @@ button {
   line-height: 1.3em;
   text-align: center;
   text-transform: uppercase;
+  font-family: Cantarell;
 }
 .many_taital {
   width: 100%;
