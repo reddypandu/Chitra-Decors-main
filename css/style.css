@@ -404,8 +404,8 @@ li.drop-down1 .drop-items1 li {
     width: 100%;
   }
   .navbar-collapse{
-    height: 50vh;
-    overflow-y: scroll;
+    height: 50vh !important;
+    overflow-y: scroll  !important;
   }
   .nav-item.drop-down .drop-items {
     position: unset;
