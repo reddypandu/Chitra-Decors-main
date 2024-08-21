@@ -275,6 +275,7 @@ button {
   display: none;
   margin-left: 20px;
   transition: 1s ease-in-out;
+
 }
 
 .nav-item.drop-down .drop-items li {
@@ -402,7 +403,10 @@ li.drop-down1 .drop-items1 li {
   .nav-item.drop-down .drop-items li {
     width: 100%;
   }
-
+  .navbar-collapse{
+    height: 50vh;
+    overflow-y: scroll;
+  }
   .nav-item.drop-down .drop-items {
     position: unset;
     background-color: #f98d06;
