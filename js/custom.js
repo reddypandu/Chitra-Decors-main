@@ -15,9 +15,9 @@ $(function () {
   /* JQuery Menu
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
 
-  $(document).ready(function () {
-    $("header nav").meanmenu();
-  });
+  // $(document).ready(function () {
+  //   $("header nav").meanmenu();
+  // });
 
   /* Tooltip
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
@@ -29,9 +29,9 @@ $(function () {
   /* sticky
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
 
-  $(document).ready(function () {
-    $(".sticky-wrapper-header").sticky({ topSpacing: 0 });
-  });
+  // $(document).ready(function () {
+  //   $(".sticky-wrapper-header").sticky({ topSpacing: 0 });
+  // });
 
   /* Mouseover
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
@@ -50,9 +50,9 @@ $(function () {
   /* NiceScroll
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
 
-  $(".brand-box").niceScroll({
-    cursorcolor: "#9b9b9c",
-  });
+  // $(".brand-box").niceScroll({
+  //   cursorcolor: "#9b9b9c",
+  // });
 
   /* NiceSelect
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
