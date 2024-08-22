@@ -237,16 +237,20 @@
       <div class="services_section2 layout_padding">
         <div class="row">
           <div class="col-lg-6 col-sm-6">
-            <div class="icon_1"><img src="images/icon-1.png" /></div>
-            <h2 class="furnitures_text">Furnitures</h2>
-            <p class="dummy_text">
-              Discover timeless elegance and superior craftsmanship with
-              chithra Decors' exquisite furniture collection. From chic modern
-              designs to classic pieces, our furniture reflects a perfect
-              blend of style and functionality, creating a harmonious ambiance
-              for your home. Elevate your living spaces with chithra Decors –
-              where every piece tells a story of sophistication and comfort.
-            </p>
+            <div class=" hover-image">
+              <img src="images/img-02.jpg" />
+              <div class="content">
+                <h2 class="furnitures_text">Furnitures</h2>
+                <p class="dummy_text">
+                  Discover timeless elegance and superior craftsmanship with
+                  chithra Decors' exquisite furniture collection. From chic modern
+                  designs to classic pieces, our furniture reflects a perfect
+                  blend of style and functionality, creating a harmonious ambiance
+                  for your home. Elevate your living spaces with chithra Decors –
+                  where every piece tells a story of sophistication and comfort.
+                </p>
+              </div>
+            </div>
             <div class="read_bt_main">
               <!-- <div class="read_bt"><a href="#">Read More</a></div> -->
             </div>
@@ -302,6 +306,48 @@
     </div>
   </div>
   <!-- services section end -->
+  <style>
+    .hover-image {
+      position: relative;
+    }
+.hover-image img{
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+    .hover-image .content {
+      position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .hover-image .content h2{
+      color: white;
+      font-weight: 800;
+      border: 2px solid white;
+      max-width: 200px;
+      padding: 10px;
+      background-color: rgba(0,0,0,0.4);
+    }
+    .hover-image .content p{
+      color: white;
+      display: none;
+
+    }
+    .hover-image:hover .content{
+      bottom: 0;
+   top: unset;
+   left: unset;
+     transform: unset;
+    }
+    .hover-image:hover .content p{
+      display: block;
+    }
+  </style>
   <!-- about section start -->
   <div class="about_section layout_padding">
     <div class="container">
@@ -515,7 +561,12 @@
         <div class="col-lg-6 pe-xl-5">
           <h3 class="title-style mb-3">Best <span>Wall Decors</span></h3>
           <p class="m-0 font-weight-bold">
-            At Chithra Decors, our commitment to excellence extends to every detail, including the exceptional range of products, especially our Wall Decors collection. We take pride in offering customers an extensive selection of Wall Decors that seamlessly blend art and style. Whether you're seeking timeless designs or contemporary trends, Chithra Decors provides a diverse array of Wall Decors to suit every taste, ensuring your spaces are not just decorated but transformed into captivating showcases of creativity. Elevate your living experience with Wall Decors from Chithra Decors, where quality meets aesthetic appeal</p>
+            At Chithra Decors, our commitment to excellence extends to every detail, including the exceptional range of
+            products, especially our Wall Decors collection. We take pride in offering customers an extensive selection
+            of Wall Decors that seamlessly blend art and style. Whether you're seeking timeless designs or contemporary
+            trends, Chithra Decors provides a diverse array of Wall Decors to suit every taste, ensuring your spaces are
+            not just decorated but transformed into captivating showcases of creativity. Elevate your living experience
+            with Wall Decors from Chithra Decors, where quality meets aesthetic appeal</p>
 
           <a href="./wall-decors.html" class="btn btn-style mt-4">Read More</a>
         </div>
@@ -527,7 +578,12 @@
         <div class="col-lg-6 pe-xl-5">
           <h3 class="title-style mb-3">Best <span>Table Decors</span></h3>
           <p class="m-0 font-weight-bold">
-            At Chithra Decors, our commitment to excellence extends to every detail, including the exceptional range of products, especially our Table Decors collection. We take pride in offering customers an extensive selection of Table Decors that seamlessly blend functionality and style. Whether you're seeking timeless designs or contemporary trends, Chithra Decors provides a diverse array of Table Decors to suit every taste, ensuring your spaces are not just furnished but adorned with elegance. Elevate your living experience with Table Decors from Chithra Decors, where quality meets aesthetic appeal.</p>
+            At Chithra Decors, our commitment to excellence extends to every detail, including the exceptional range of
+            products, especially our Table Decors collection. We take pride in offering customers an extensive selection
+            of Table Decors that seamlessly blend functionality and style. Whether you're seeking timeless designs or
+            contemporary trends, Chithra Decors provides a diverse array of Table Decors to suit every taste, ensuring
+            your spaces are not just furnished but adorned with elegance. Elevate your living experience with Table
+            Decors from Chithra Decors, where quality meets aesthetic appeal.</p>
 
           <a href="./table-decors.html" class="btn btn-style mt-4">Read More</a>
         </div>
@@ -551,7 +607,7 @@
           <div class="col-md-6">
             <div class="container_main">
               <img src="images/img-02.jpg" alt="Avatar" class="image" />
-             
+
             </div>
             <h3 class="temper_text">class! comfort! character!</h3>
             <p class="dololr_text">
@@ -569,7 +625,7 @@
           <div class="col-md-6">
             <div class="container_main">
               <img src="images/img-3.jpg" alt="Avatar" class="image" />
-            
+
             </div>
             <h3 class="temper_text">
               A style guide for you perfect home decor
@@ -753,19 +809,19 @@
                   <div class="col-sm-4">
                     <div class="container_main1">
                       <img src="images/img-30.jpg" alt="Avatar" class="image" style="width: 100%" />
-                      
+
                     </div>
                   </div>
                   <div class="col-sm-4">
                     <div class="container_main1">
                       <img src="images/img-31.jpg" alt="Avatar" class="image" style="width: 100%" />
-                     
+
                     </div>
                   </div>
                   <div class="col-sm-4">
                     <div class="container_main1">
                       <img src="images/img-32.jpg" alt="Avatar" class="image" style="width: 100%" />
-                     
+
                     </div>
                   </div>
                 </div>
@@ -779,19 +835,19 @@
                   <div class="col-sm-4">
                     <div class="container_main1">
                       <img src="images/img-14.jpg" alt="Avatar" class="image" style="width: 100%" />
-                     
+
                     </div>
                   </div>
                   <div class="col-sm-4">
                     <div class="container_main1">
                       <img src="images/img_13.jpg" alt="Avatar" class="image" style="width: 100%" />
-                     
+
                     </div>
                   </div>
                   <div class="col-sm-4">
                     <div class="container_main1">
                       <img src="images/img-15.jpg" alt="Avatar" class="image" style="width: 100%" />
-                      
+
                     </div>
                   </div>
                 </div>
