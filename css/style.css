@@ -869,10 +869,10 @@ h3.title-style span {
 .about_section {
   width: 100%;
   float: left;
-  background-color: #f98d06;
+  /* background-color: #f98d06; */
   height: auto;
   padding-bottom: 90px;
-  background-image: url(../images/contact-bg.png);
+  /* background-image: url(../images/contact-bg.png); */
 }
 .about_section1 {
   width: 100%;
@@ -886,15 +886,22 @@ h3.title-style span {
 .image_1 {
   width: 100%;
   float: left;
+  overflow: hidden;
+  transition: all 1s;
 }
-
+.image_1:hover img{
+  transform: scale(1.1);
+}
+.image_1 img{
+  border-radius: 3rem;
+}
 .about_text {
   width: 100%;
   float: left;
-  font-size: 28px;
+  font-size:2rem;
   color: #d32618;
-  text-transform: uppercase;
-  font-weight: 600;
+  text-transform: capitalize;
+  font-weight: 700;
   font-family: "Playfair Display", Sans-serif !important;
 }
 .lorem_text {
@@ -903,7 +910,7 @@ h3.title-style span {
   font-size: 16px;
   color: black;
   margin-left: 0px;
- 
+ font-weight: 500;
   /* padding-top: 40px; */
 }
 .read_bt1 {
