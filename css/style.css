@@ -28,7 +28,9 @@
 /* @import url(nice-select.css); */
 
 /*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
-
+:root{
+  --primary:maroon;
+}
 * {
   box-sizing: border-box !important;
   transition: ease all 0.5s;
@@ -673,12 +675,19 @@ li.drop-down1 .drop-items1 li {
 .homeaboutblock {
   height: 400px;
   width: 400px;
+  overflow: hidden;
+  transition: all 1s;
 }
+
 .homeaboutblock img {
   height: 100%;
   width: 100%;
   aspect-ratio: 3/1;
   border-radius: 10px;
+  cursor: pointer;
+}
+.homeaboutblock:hover img{
+  transform: scale(1.1);
 }
 h3.title-style {
   font-size: 40px;
@@ -966,6 +975,10 @@ h3.title-style span {
 .furnitures_section2 {
   width: 100%;
   float: left;
+}.owl-item{
+width: 100%;
+  display: grid;
+  place-items: center;
 }
 .furnitures_section2 .col-md-4 {
   margin-bottom: 5px;
@@ -979,11 +992,31 @@ h3.title-style span {
   padding: 5px 10px;
   color: white;
 }
+
+.furnitures_section2 .col-md-12 {
+padding: 1rem;
+/* box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5),-2px -2px 4px rgba(0, 0, 0, 0.2); */
+border: 2px solid var(--primary) !important;
+
+border-radius: 2rem;
+}
+
+.furnitures_section2 .col-md-12 .dololr_text{
+  /* min-height: 250px; */
+}
 .furnitures_section2 .container_main {
-  height: 350px !important;
+  height: 200px !important;
+  /* max-width: 550px; */
+  overflow: hidden;
+  object-fit: cover;
 }
 .furnitures_section2 .container_main .image {
   height: 100%;
+  transition: all 1s;
+  border-radius: 2rem;
+}
+.furnitures_section2 .container_main:hover .image {
+  transform: scale(1.1);
 }
 .container_main {
   position: relative;
@@ -1038,7 +1071,7 @@ a:hover {
 .temper_text {
   width: 100%;
   float: left;
-  font-size: 18px;
+  font-size: 13px;
   color: black;
   text-transform: uppercase;
   font-weight: bold;
@@ -1047,10 +1080,11 @@ a:hover {
 .dololr_text {
   width: 100%;
   float: left;
-  font-size: 16px;
+  font-size: 12px;
   color: #121111;
-  margin-top: 10px;
+  margin-top: 5px;
   margin-left: 0px;
+  line-height: 1.6;
 }
 .who_section {
   width: 100%;

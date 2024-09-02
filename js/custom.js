@@ -97,6 +97,34 @@ $(function () {
     });
   });
 
+  $(document).ready(function () {
+    var owl = $(".services-slider");
+    owl.owlCarousel({
+      items: 4,
+      loop: true,
+      margin: 10,
+      nav: false,
+      dots: false,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        600: {
+          items: 2,
+        },
+        960: {
+          items: 3,
+        },
+        1200: {
+          items: 4,
+        },
+      },
+      autoplay: true,
+      autoplayTimeout: 3000,
+      autoplayHoverPause: true,
+    });
+  });
+
   /* OwlCarousel - Product Slider
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
 
