@@ -621,8 +621,8 @@ li.drop-down1 .drop-items1 li {
   border-radius: 4px;
   font-weight: bold;
   outline: none;
-  border: 2px solid #d32618;
-  background: #d32618;
+  border: 2px solid var(--primary);
+  background: var(--primary);
   transition: all 1.8s ease-in-out;
 }
 .icon_2 {
@@ -690,9 +690,11 @@ li.drop-down1 .drop-items1 li {
   transform: scale(1.1);
 }
 h3.title-style {
-  font-size: 40px;
-  line-height: 50px;
+  font-size: 1.5rem;
+  line-height: 30px;
   font-weight: 300;
+  margin: 0 !important;
+  padding-block: 1rem;
 }
 h3.title-style span {
   font-weight: bold;
@@ -952,7 +954,8 @@ h3.title-style span {
   width: 100%;
   float: left;
   padding-bottom: 90px;
-  background-color: #f98d06;
+  /* background-color: #f98d06; */
+
 }
 .our_text {
   width: 100%;
@@ -982,7 +985,7 @@ width: 100%;
 }
 .furnitures_section2 .col-md-4 {
   margin-bottom: 5px;
-  border: 1px solid white;
+  /* border: 1px solid white; */
 }
 .furnitures_section2 .t {
   text-align: center;
@@ -1005,15 +1008,19 @@ border-radius: 2rem;
   /* min-height: 250px; */
 }
 .furnitures_section2 .container_main {
-  height: 200px !important;
+  height: 100% !important;
   /* max-width: 550px; */
   overflow: hidden;
-  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  /* object-fit: cover; */
+  border-radius: 2rem;
 }
 .furnitures_section2 .container_main .image {
   height: 100%;
   transition: all 1s;
   border-radius: 2rem;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 .furnitures_section2 .container_main:hover .image {
   transform: scale(1.1);
@@ -1088,18 +1095,21 @@ a:hover {
 }
 .who_section {
   width: 100%;
-  float: left;
-
-  height: auto;
-  padding-bottom: 55px;
+  /* height: auto; */
+padding-block: 2rem;
   background-size: 100%;
-  background-image: url(https://cdn-koccl.nitrocdn.com/MJtVxKyemDvALymLuhPCqurAikADofrp/assets/images/optimized/rev-ee7051a/darpanfurnishings.com/wp-content/uploads/2021/05/vippng.com-stage-curtains-png.png);
-  background-position: center right;
+  background-image: url(/images/banner-bg.png);
+  background-position: center center;
   background-repeat: no-repeat;
-  background-size: contain;
-
+  background-size:cover;
+  display: grid;
+  place-items: center;
+  background-attachment: fixed;
   /* opacity: 0.5; */
-  background-color: rgb(219, 169, 70);
+  /* background-color: rgb(219, 169, 70); */
+}
+.who_section .lorem_ipsum_text{
+  font-weight: 700;
 }
 .who_section1 {
   width: 100%;
@@ -1248,7 +1258,7 @@ a:hover {
 }
 #main_slider a.carousel-control-prev {
   position: absolute;
-  left: -94px;
+  left: 0px;
   top: 57%;
   background-color: #000;
   color: #ffffff;
@@ -1256,7 +1266,7 @@ a:hover {
 
 #main_slider a.carousel-control-next {
   position: absolute;
-  right: -95px;
+  right: 0px;
   top: 57%;
 }
 #main_slider .carousel-control-prev,
@@ -1281,8 +1291,8 @@ a:hover {
   padding-top: 50px;
   padding-bottom: 90px;
   background-color: #f98d06;
-  background-image: url(../images/contact-bg.png);
-  margin-bottom: 10px;
+  /* background-image: url(../images/contact-bg.png); */
+  /* margin-bottom: 10px; */
 }
 .client_text {
   width: 100%;
