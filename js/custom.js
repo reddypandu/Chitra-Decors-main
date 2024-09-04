@@ -19,6 +19,85 @@ $(function () {
   //   $("header nav").meanmenu();
   // });
 
+
+  $(document).ready(function() {
+    let currentIndex = 0;
+    const galleryItems = $('.gallery-item img');
+    const popup = $('.popup');
+    const popupImage = $('.popup-content img');
+    const itemsPerPage = 6;
+    const paginationLinks = $('.pagination a.page-num');
+
+    function showPopup(index) {
+      const imgSrc = $(galleryItems[index]).attr('src');
+      popupImage.attr('src', imgSrc);
+      popup.fadeIn();
+      currentIndex = index;
+    }
+
+    function closePopup() {
+      popup.fadeOut();
+    }
+
+    function showNext() {
+      currentIndex = (currentIndex + 1) % galleryItems.length;
+      showPopup(currentIndex);
+    }
+
+    function showPrev() {
+      currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+      showPopup(currentIndex);
+    }
+
+    function paginateGallery(pageIndex) {
+      galleryItems.parent().hide();
+      galleryItems.slice(pageIndex * itemsPerPage, (pageIndex + 1) * itemsPerPage).parent().show();
+      paginationLinks.removeClass('active');
+      paginationLinks.eq(pageIndex).addClass('active');
+    }
+
+    galleryItems.on('click', function() {
+      const index = galleryItems.index(this);
+      showPopup(index);
+    });
+
+    $('.close').on('click', closePopup);
+    $('.next').on('click', showNext);
+    $('.prev').on('click', showPrev);
+    popup.on('click', function(e) {
+      if (!$(e.target).is('.popup-content img, .next, .prev')) {
+        closePopup();
+      }
+    });
+
+    paginationLinks.on('click', function(e) {
+      e.preventDefault();
+      const pageIndex = $(this).index() - 1;
+      paginateGallery(pageIndex);
+    });
+
+    $('.prev-page').on('click', function(e) {
+      e.preventDefault();
+      const activePage = $('.pagination a.page-num.active').index() - 1;
+      if (activePage > 0) {
+        paginateGallery(activePage - 1);
+      }
+    });
+
+    $('.next-page').on('click', function(e) {
+      e.preventDefault();
+      const activePage = $('.pagination a.page-num.active').index() - 1;
+      if (activePage < paginationLinks.length - 1) {
+        paginateGallery(activePage + 1);
+      }
+    });
+
+    paginateGallery(0);
+  });
+
+
+
+
   /* Tooltip
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
 
@@ -103,20 +182,24 @@ $(function () {
       items: 4,
       loop: true,
       margin: 10,
-      nav: false,
+      nav: true,
       dots: false,
+      navText: [
+        "<i class='fa fa-angle-left'></i>",
+        "<i class='fa fa-angle-right'></i>",
+      ],
       responsive: {
         0: {
           items: 1,
         },
         600: {
-          items: 2,
+          items: 1,
         },
         960: {
-          items: 3,
+          items: 2,
         },
         1200: {
-          items: 4,
+          items: 3,
         },
       },
       autoplay: true,

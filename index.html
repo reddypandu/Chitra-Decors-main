@@ -277,7 +277,7 @@
 
 
   <!-- services section start -->
-  <div class="services_section layout_padding">
+  <div class="services_section layout_padding" data-aos="fade-in">
     <div class="container">
       <h1 class="services_taital">Best Home Decor Company in Bachupally, Hyderabad</h1>
       <p class="many_taital">
@@ -286,7 +286,7 @@
       <div class="services_section2 layout_padding">
         <div class="row">
           <div class="col-lg-6 col-sm-6">
-            <div class="img-container">
+            <div class="img-container" data-aos="fade-right">
               <img src="images/img-02.jpg" alt="Descriptive Image" class="hover-img">
               <div class="overlay">
                   <h2>Furnitures</h2>
@@ -320,7 +320,7 @@
             </div>
           </div>
           <div class="col-lg-6 col-sm-6">
-            <div class="img-container">
+            <div class="img-container" data-aos="fade-left">
               <img src="images/curtains/img102.jpg" alt="Descriptive Image" class="hover-img">
               <div class="overlay">
                   <h2>Curtains</h2>
@@ -345,7 +345,7 @@
           </div>
           </div>
           <div class="col-lg-6 col-sm-6">
-            <div class="img-container">
+            <div class="img-container" data-aos="fade-right">
             <img src="images/table-decors/img802.jpg" alt="Descriptive Image" class="hover-img">
             <div class="overlay">
                 <h2>Home Decor</h2>
@@ -370,7 +370,7 @@
           </div>
         </div>
           <div class="col-lg-6 col-sm-6">
-            <div class="img-container">
+            <div class="img-container" data-aos="fade-left">
               <img src="images/img-23.jpg" alt="Descriptive Image" class="hover-img">
               <div class="overlay">
                   <h2>Bedroom</h2>
@@ -405,14 +405,13 @@
 
   
 
-
 <style>
   .img-container {
     position: relative;
-    display: inline-block; /* Ensures the container wraps the image and overlay */
-    width: 100%; /* Adjust based on your image size */
-    height: 100%; /* Adjust based on your image size */
-    overflow: hidden; /* Ensures the overlay doesn't spill outside the container */
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
     border-radius: 2rem;
     transition: all 1s;
 }
@@ -422,38 +421,55 @@
     height: 400px;
     display: block;
     object-fit: cover;
+    transition: transform 0.5s ease; /* Smooth zoom on hover */
 }
-.img-container .overlay h2{
-  font-weight: 800;
-      border: 2px solid white;
-   color: white;
-      padding: 10px;
-      background-color: rgba(0,0,0,0.4);
-}
-.overlay {
+
+.img-container .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+    background: rgba(0, 0, 0, 0.4);
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    opacity: 0;
-    transition: opacity 0.5s ease; /* Smooth transition effect */
     border-radius: 0;
+    opacity: 1 !important;
 }
 
-.img-container:hover .overlay {
-    opacity: 1; /* Shows the content when hovered */
-    cursor: pointer;
+.img-container .overlay h2 {
+    font-weight: 800;
+    border: 2px solid white;
+    color: white;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-bottom: 10px; /* Add space between h2 and p */
+    z-index: 2; /* Ensure h2 is above the p element */
+  
 }
-.img-container:hover img{
-  transform: scale(1.1);
+
+.img-container .overlay p{
+ 
+   opacity: 0;
+    z-index: 1; /* Ensure p appears above the background but below h2 */
+ 
+    transition:opacity 0.5s ease,  display 1s ease-in;
+}
+
+.img-container:hover .overlay p {
+    opacity: 1; 
+    cursor: pointer;
+    z-index: 2;
+
+   
+}
+
+.img-container:hover .hover-img {
+    transform: scale(1.1); /* Zoom in effect on hover */
 }
 
 </style>
@@ -469,8 +485,8 @@
       <p class="many_taital">
         Explore our reliable services to get an elegant makeover
       </p>
-      <div class="row align-items-center mb-4">
-        <div class="col-lg-6 pe-xl-5">
+      <div class="row align-items-center mb-4" >
+        <div class="col-lg-6 pe-xl-5"  data-aos="fade-up">
           <h3 class="title-style mb-3">Our <span>Blinds</span></h3>
           <p class="m-0 font-weight-bold">
             Chithra Decors offers a diverse range of blinds, including roller blinds, zebra blinds, and roman blinds,
@@ -482,7 +498,7 @@
 
           <a href="./our-blinds.html" class="btn btn-style mt-4">Read More</a>
         </div>
-        <div class="col-lg-6 homeaboutblock mt-lg-0 mt-5">
+        <div class="col-lg-6 homeaboutblock mt-lg-0 mt-5"  data-aos="fade-up">
           <img src="./images/rollerblinds/img1011.jpg" class="img-fluid radius-image">
         </div>
       </div>
@@ -686,97 +702,191 @@
        
           <div class="col-md-12">
             <div class="container_main">
-              <img src="images/img-02.jpg" alt="Avatar" class="image" />
+              <img src="images/roman-blinds.jpg" alt="Avatar" class="image" />
 
             </div>
-            <h3 class="temper_text">class! comfort! character!</h3>
-            <p class="dololr_text">
-              Curtains have the distinct ability to magnificently define a
-              space. They are known infuse aesthetic appeal and enliven your
-              home. Looking for a way to block out the hot sunlight during the
-              day? Or for a way to let the first ray of sunlight into your
-              bedroom? Want to get a stunning festive makeover? Or do you want
-              to adorn your child’s room with kids themed drapes? Well, our
-              range of curtains has got you covered. Pamper your home with
-              choicest curtains. Choose from 250+ curtains styles across
-              10,000 designs and an array of colors and patterns.
+            <h3 class="title-style mb-3">Our <span>Blinds</span></h3>
+            <p class="m-0 font-weight-bold">
+              Chithra Decors offers a diverse range of blinds, including roller blinds, zebra blinds, and roman blinds,
+            providing a comprehensive solution for every decor preference. Our collection combines functionality with
+            aesthetic appeal, ensuring a perfect fit for any space. Whether you seek the simplicity of roller blinds,
+            the versatility of zebra blinds, or the timeless elegance of roman blinds, Chithra Decors caters to your
+            individual style, promising quality and sophistication in every choice. Elevate your living spaces with our
+            curated selection of blinds that harmoniously blend practicality and design.
             </p>
+            <a href="./blinds/roller-blinds.html" class="btn btn-style mt-4">Read More</a>
           </div>
           <div class="col-md-12">
             <div class="container_main">
-              <img src="images/img-3.jpg" alt="Avatar" class="image" />
+              <img src="images/wallpaper-roll1.jpg" alt="Avatar" class="image" />
 
             </div>
-            <h3 class="temper_text">
-              A style guide for you perfect home decor
-            </h3>
-            <p class="dololr_text">
-              Caring for your belongings is therapeutic, more so during the
-              pandemic. As the virtual world takes over the workplace, the
-              need to accentuate the feel of the space you inhabit feels like
-              a necessity & every wall of a home is a mini canvas. The right
-              wallpaper can make it come alive. Want the walls in your room to
-              reflect your style? We have a wallpaper for all tastes! Our
-              gorgeous collection of wallpapers can quickly decorate your
-              walls and make it the focal point of attention.
-               <!-- Reason why, we
-              bring you 50,000+ wall decor patterns. -->
-               <!-- Take your pick and give
-              your home a makeover it deserves. -->
-            </p>
+            <h3 class="title-style mb-3">Our <span>Wallpapers</span></h3>
+            <p class="m-0 font-weight-bold">
+
+              At Chithra Decors, we specialize in bringing walls to life through our curated collection of wallpapers. Our
+              showroom is a haven for those seeking to transform their spaces with vibrant colors, intricate patterns, and
+              modern designs. Whether you prefer a classic touch or contemporary flair, our diverse range caters to every
+              style. With quality craftsmanship and a passion for interior aesthetics, Chithra Decors is your destination
+              for turning walls into captivating works of art.</p>
+              <a href="./wallpapers.html" class="btn btn-style mt-4">Read More</a>
           </div>
 
           
           <div class="col-md-12">
             <div class="container_main">
-              <img src="images/img-5.jpg" alt="Avatar" class="image" />
-              <!-- <div class="overlay">
-                           <a href="#" class="icon" title="User Profile">
-                           <i class="fa fa-search"></i>
-                           </a>=
-                        </div> -->
+              <img src="images/sofa1.jpg" alt="Avatar" class="image" />
+            
             </div>
-            <h3 class="temper_text">
-              Make the walls in your home come alive
-            </h3>
-            <p class="dololr_text">
-              "chithra Decors elevates interior aesthetics with their stunning
-              wallpaper collection. Every wall of a home is a mini canvas. The
-              right wallpaper can make it come alive. Want the walls in your
-              room to reflect your style? We have a wallpaper for all tastes!
-              Our gorgeous collection of wallpapers can quickly decorate your
-              walls and make it the focal point of attention. Reason why, we
-              bring you 50,000+ wall decor patterns. 
-              Take your pick and give
-              your home a makeover it deserves.
-            </p>
+            <h3 class="title-style mb-3">Our <span>Sofas</span></h3>
+            <p class="m-0 font-weight-bold">
+              At Chithra Decors, our sofas redefine comfort and style, creating inviting spaces within your home. Immerse
+              yourself in a world of quality craftsmanship and diverse designs that cater to your unique taste. With an
+              array of options, we offer sofas that seamlessly blend aesthetics with functionality, ensuring each piece
+              becomes a centerpiece in your living spaces. Discover the perfect sofa at Chithra Decors, where comfort
+              meets elegance.</p>
+              <a href="./sofas.html" class="btn btn-style mt-4">Read More</a>
           </div>
           <div class="col-md-12">
             <div class="container_main">
-              <img src="images/img-4.png" alt="Avatar" class="image" />
-              <!-- <div class="overlay">
-                           <a href="#" class="icon" title="User Profile">
-                           <i class="fa fa-search"></i>
-                           </a>
-                        </div> -->
+              <img src="images/PUFFI/0fefec52d3608c0856a999ff1d489e4d.jpg" alt="Avatar" class="image" />
+             
             </div>
-            <h3 class="temper_text">
-              Improve your sleep by using our different types of Mattresses
-            </h3>
-            <p class="dololr_text">
-              It is a known fact that sleep is an important function of aiding
-              your mind and body in recharging every night. This process leads
-              to you waking up feeling refreshed every morning.Bed sheets,
-              Comforters, Quilts, Pillows, Cushions, Towels…they all lend a
-              unique feeling to everyday experience at home. Make your
-              everyday at home effortlessly comfortable and cozy by choosing
-              from our stupendous range of bedding products and bath
-              accessories.
-               <!-- And that’s not all, with exclusive products from
-              world class premium decor brands…  -->
-              <!-- one can expect to get a
-              stunningly luxurious home upgrade. -->
-            </p>
+            <h3 class="title-style mb-3">Our <span>Puffystools</span></h3>
+            <p class="m-0 font-weight-bold">
+              Chithra Decors boasts an exquisite collection of puffy stools, where comfort meets chic design. Elevate your
+              living space with our trendy and versatile stools that not only provide a plush seating experience but also
+              add a touch of contemporary flair to your decor. Explore Chithra Decors for an array of stylish and
+              comfortable puffy stools, curated to enhance your home's aesthetic with both functionality and fashion in
+              mind.</p>
+              <a href="./Puffystools.html" class="btn btn-style mt-4">Read More</a>
+          </div>
+          <div class="col-md-12">
+            <div class="container_main">
+              <img src="images/PUFFI/0fefec52d3608c0856a999ff1d489e4d.jpg" alt="Avatar" class="image" />
+             
+            </div>
+            <h3 class="title-style mb-3">Our <span>Luxury Chairs</span></h3>
+            <p class="m-0 font-weight-bold">
+
+              Chithra Decors presents an exquisite collection of luxury high chairs that redefine sophistication in home
+              decor. Elevate your living space with our meticulously curated range, offering both comfort and aesthetic
+              appeal. Crafted with precision and designed for utmost elegance, our luxury high chairs seamlessly blend
+              functionality with opulent style. Transform your space into a haven of refinement with Chithra Decors'
+              exclusive selection of high chairs.</p>
+  
+            <a href="./Luxuryhighchairs.html" class="btn btn-style mt-4">Read More</a>
+          </div>
+          <div class="col-md-12">
+            <div class="container_main">
+              <img src="images/PUFFI/0fefec52d3608c0856a999ff1d489e4d.jpg" alt="Avatar" class="image" />
+             
+            </div>
+            <h3 class="title-style mb-3">Our <span>Central Tables</span></h3>
+            <p class="m-0 font-weight-bold">
+              At Chithra Decors, our collection of central tables stands as a testament to timeless elegance and
+              functional design. Carefully curated to suit diverse tastes, our central tables seamlessly blend style and
+              utility, adding a focal point to any living space. Crafted with precision and attention to detail, each
+              table reflects our commitment to quality and aesthetics. Elevate your home's interior with the exquisite
+              central tables from Chithra Decors, where sophistication meets functionality.</p>
+  
+            <a href="./Centraltables.html" class="btn btn-style mt-4">Read More</a>
+          </div>
+          <div class="col-md-12">
+            <div class="container_main">
+              <img src="images/PUFFI/0fefec52d3608c0856a999ff1d489e4d.jpg" alt="Avatar" class="image" />
+             
+            </div>
+            <h3 class="title-style mb-3">Our <span>Artificial Turfs</span></h3>
+            <p class="m-0 font-weight-bold">
+
+              Chithra Decors presents a lush collection of artificial turfs that redefine green aesthetics for both
+              residential and commercial spaces. Our premium selection combines realistic textures and durability,
+              offering a maintenance-free solution for vibrant greenery. Elevate your surroundings with the finest
+              artificial turfs at Chithra Decors, where quality meets aesthetic excellence. Transform any area into a
+              verdant oasis with our carefully curated range of synthetic grass options.</p>
+  
+            <a href="./Artificialturfs.html" class="btn btn-style mt-4">Read More</a>
+          </div>
+          <div class="col-md-12">
+            <div class="container_main">
+              <img src="images/PUFFI/0fefec52d3608c0856a999ff1d489e4d.jpg" alt="Avatar" class="image" />
+             
+            </div>
+            <h3 class="title-style mb-3">Our <span>Curtains</span></h3>
+            <p class="m-0 font-weight-bold">
+
+              At Chithra Decors, curtains are not just fabric; they are the exquisite touch that transforms spaces. Our
+              curated collection brings together a fusion of style and functionality, offering a myriad of designs to suit
+              every taste. From classic elegance to contemporary chic, Chithra Decors provides the perfect drapery
+              solutions, ensuring your windows reflect your unique aesthetic. Elevate your home with our premium curtains,
+              where each piece is a statement in sophistication and comfort.</p>
+  
+            <a href="./curtains.html" class="btn btn-style mt-4">Read More</a>
+          </div>
+          <div class="col-md-12">
+            <div class="container_main">
+              <img src="images/PUFFI/0fefec52d3608c0856a999ff1d489e4d.jpg" alt="Avatar" class="image" />
+             
+            </div>
+            <h3 class="title-style mb-3">Our <span>Head Boards</span></h3>
+            <p class="m-0 font-weight-bold">
+
+              At Chithra Decors, we specialize in crafting exquisite headboards that redefine the aesthetics of your
+              bedroom. Our curated collection blends creativity with functionality, offering a diverse range of designs to
+              suit various tastes and preferences. Whether you prefer timeless elegance or contemporary flair, our
+              headboards add a touch of luxury and comfort to your personal space. Transform your bedroom into a haven of
+              style with our thoughtfully designed headboards at Chithra Decors.</p>
+  
+            <a href="./head-boards.html" class="btn btn-style mt-4">Read More</a>
+          </div>
+          <div class="col-md-12">
+            <div class="container_main">
+              <img src="images/PUFFI/0fefec52d3608c0856a999ff1d489e4d.jpg" alt="Avatar" class="image" />
+             
+            </div>
+            <h3 class="title-style mb-3">Our <span>Longers</span></h3>
+            <p class="m-0 font-weight-bold">
+              At Chithra Decors, our commitment to excellence extends to every detail, including the exceptional range of
+              products, especially our Longers collection. We take pride in offering customers an extensive selection of
+              Longers that seamlessly blend comfort and style. Whether you're seeking timeless designs or contemporary
+              trends, Chithra Decors provides a diverse array of Longers to suit every taste, ensuring your spaces are not
+              just furnished but transformed into inviting havens of relaxation. Elevate your living experience with
+              Longers from Chithra Decors, where quality meets aesthetic appeal.</p>
+  
+            <a href="./longers.html" class="btn btn-style mt-4">Read More</a>
+          </div>
+          <div class="col-md-12">
+            <div class="container_main">
+              <img src="images/PUFFI/0fefec52d3608c0856a999ff1d489e4d.jpg" alt="Avatar" class="image" />
+             
+            </div>
+            <h3 class="title-style mb-3">Best <span>Wall Decors</span></h3>
+            <p class="m-0 font-weight-bold">
+              At Chithra Decors, our commitment to excellence extends to every detail, including the exceptional range of
+              products, especially our Wall Decors collection. We take pride in offering customers an extensive selection
+              of Wall Decors that seamlessly blend art and style. Whether you're seeking timeless designs or contemporary
+              trends, Chithra Decors provides a diverse array of Wall Decors to suit every taste, ensuring your spaces are
+              not just decorated but transformed into captivating showcases of creativity. Elevate your living experience
+              with Wall Decors from Chithra Decors, where quality meets aesthetic appeal</p>
+  
+            <a href="./wall-decors.html" class="btn btn-style mt-4">Read More</a>
+          </div>
+          <div class="col-md-12">
+            <div class="container_main">
+              <img src="images/PUFFI/0fefec52d3608c0856a999ff1d489e4d.jpg" alt="Avatar" class="image" />
+             
+            </div>
+            <h3 class="title-style mb-3">Best <span>Table Decors</span></h3>
+            <p class="m-0 font-weight-bold">
+              At Chithra Decors, our commitment to excellence extends to every detail, including the exceptional range of
+              products, especially our Table Decors collection. We take pride in offering customers an extensive selection
+              of Table Decors that seamlessly blend functionality and style. Whether you're seeking timeless designs or
+              contemporary trends, Chithra Decors provides a diverse array of Table Decors to suit every taste, ensuring
+              your spaces are not just furnished but adorned with elegance. Elevate your living experience with Table
+              Decors from Chithra Decors, where quality meets aesthetic appeal.</p>
+  
+            <a href="./table-decors.html" class="btn btn-style mt-4">Read More</a>
           </div>
         </div>
       </div>
@@ -784,401 +894,252 @@
   </div>
   <!-- furnitures section end -->
 
-
-
-      <!-- Video Gallery Start -->
-      <div class="container-fluid gallery pb-5">
-        <div class="container pb-5">
-            <div class="pb-5">
-                <h4 class="text-primary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">Our Gallery</h4>
-                <h1 class="mb-0 wow fadeInUp" data-wow-delay="0.3s">Our gallery</h1>
-            </div>
-            <div class="tab-class wow fadeInUp" data-wow-delay="0.1s">
-                <ul class="nav nav-pills d-inline-flex justify-content-center pb-4">
-                    <li class="nav-item bg-light border border-primary rounded-pill mb-4">
-                        <a class="d-flex py-2 px-5 rounded-pill active" data-bs-toggle="pill" href="#GalleryTab-1">
-                            <span class="text-dark">Wallpapers</span>
-                        </a>
-                    </li>
-                    <li class="nav-item bg-light border border-primary rounded-pill mb-4">
-                        <a class="d-flex py-2 px-5 rounded-pill" data-bs-toggle="pill" href="#GalleryTab-2">
-                            <span class="text-dark">Curtains</span>
-                        </a>
-                    </li>
-                    <li class="nav-item bg-light border border-primary rounded-pill mb-4">
-                        <a class="d-flex py-2 px-5 rounded-pill" data-bs-toggle="pill" href="#GalleryTab-3">
-                            <span class="text-dark">Blinds</span>
-                        </a>
-                    </li>
-                    <li class="nav-item bg-light border border-primary rounded-pill mb-4">
-                        <a class="d-flex py-2 px-5 rounded-pill" data-bs-toggle="pill" href="#GalleryTab-4">
-                            <span class="text-dark">Sofa</span>
-                        </a>
-                    </li>
-                    <li class="nav-item bg-light border border-primary rounded-pill mb-4">
-                        <a class="d-flex py-2 px-5 rounded-pill" data-bs-toggle="pill" href="#GalleryTab-5">
-                            <span class="text-dark">Artificial Grass</span>
-                        </a>
-                    </li>
-                </ul>
-    
-                <div class="tab-content">
-                    <!-- Wallpapers Tab -->
-                    <div id="GalleryTab-1" class="tab-pane fade show active p-0 gallery-section" >
-                        <div class="row g-2">
-                            <!-- Add your image elements here -->
-                            <!-- Example -->
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="h-100">
-                                    <a href="img/gallery-images/1.png" data-lightbox="gallery">
-                                        <img src="/images/wallpaper-roll1.jpg" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="h-100">
-                                    <a href="img/gallery-images/2.png" data-lightbox="gallery">
-                                        <img src="/images/wallpaper-roll2.jpg" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="h-100">
-                                    <a href="img/gallery-images/3.png" data-lightbox="gallery">
-                                        <img src="/images/wallpaper-roll3.jpg" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="h-100">
-                                    <a href="img/gallery-images/4.png" data-lightbox="gallery">
-                                        <img src="images/wallpaper-roll4.jpg" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="h-100">
-                                    <a href="img/gallery-images/5.png" data-lightbox="gallery">
-                                        <img src="images/wallpaper-roll5.jpg" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="h-100">
-                                    <a href="img/gallery-images/6.png" data-lightbox="gallery">
-                                        <img src="images/wallpaper-roll6.jpg" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="h-100">
-                                    <a href="img/gallery-images/7.png" data-lightbox="gallery">
-                                        <img src="img/gallery-images/7.png" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="h-100">
-                                    <a href="img/gallery-images/8.png" data-lightbox="gallery">
-                                        <img src="img/gallery-images/8.png" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div> -->
-                           
-                            
-                            <!-- Repeat for other images -->
-                        </div>
-                    </div>
-    
-                    <!-- Curtains Tab -->
-                    <div id="GalleryTab-2" class="tab-pane fade p-0 gallery-section" style="display: none;">
-                        <div class="row g-2">
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="h-100">
-                                    <a href="img/gallery-images/1-c.png" data-lightbox="gallery">
-                                        <img src="/images/curtains/img10.jpg" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="h-100">
-                                    <a href="img/gallery-images/2-c.png" data-lightbox="gallery">
-                                        <img src="img/gallery-images/2-c.png" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="h-100">
-                                    <a href="img/gallery-images/3-c.png" data-lightbox="gallery">
-                                        <img src="img/gallery-images/3-c.png" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="h-100">
-                                    <a href="img/gallery-images/4-c.png" data-lightbox="gallery">
-                                        <img src="img/gallery-images/4-c.png" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="h-100">
-                                    <a href="img/gallery-images/5-c.png" data-lightbox="gallery">
-                                        <img src="img/gallery-images/5-c.png" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="h-100">
-                                    <a href="img/gallery-images/6-c.png" data-lightbox="gallery">
-                                        <img src="img/gallery-images/6-c.png" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="h-100">
-                                    <a href="img/gallery-images/7-c.png" data-lightbox="gallery">
-                                        <img src="img/gallery-images/7-c.png" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="h-100">
-                                    <a href="img/gallery-images/8-c.png" data-lightbox="gallery">
-                                        <img src="img/gallery-images/8-c.png" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- Repeat for other images -->
-                        </div>
-                    </div>
-    
-                    <!-- Blinds Tab -->
-                    <div id="GalleryTab-3" class="tab-pane fade p-0 gallery-section " style="display: none;">
-                        <div class="row g-2">
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="h-100">
-                                    <a href="img/gallery-images/1-b.png" data-lightbox="gallery">
-                                        <img src="/images/roman-blinds.jpg" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="h-100">
-                                    <a href="img/gallery-images/2-b.png" data-lightbox="gallery">
-                                        <img src="img/gallery-images/2-b.png" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="h-100">
-                                    <a href="img/gallery-images/3-b.png" data-lightbox="gallery">
-                                        <img src="img/gallery-images/3-b.png" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="h-100">
-                                    <a href="img/gallery-images/4-b.png" data-lightbox="gallery">
-                                        <img src="img/gallery-images/4-b.png" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="h-100">
-                                    <a href="img/gallery-images/5-b.png" data-lightbox="gallery">
-                                        <img src="img/gallery-images/5-b.png" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="h-100">
-                                    <a href="img/gallery-images/6-b.png" data-lightbox="gallery">
-                                        <img src="img/gallery-images/6-b.png" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="h-100">
-                                    <a href="img/gallery-images/7-b.png" data-lightbox="gallery">
-                                        <img src="img/gallery-images/7-b.png" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="h-100">
-                                    <a href="img/gallery-images/8-b.png" data-lightbox="gallery">
-                                        <img src="img/gallery-images/8-b.png" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- Repeat for other images -->
-                        </div>
-                    </div>
-    
-                    <!-- Sofa Tab -->
-                    <div id="GalleryTab-4" class="tab-pane fade p-0 gallery-section" style="display: none;">
-                        <div class="row g-2">
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="h-100">
-                                    <a href="img/gallery-images/1-s.png" data-lightbox="gallery">
-                                        <img src="/images/sofas/img10.jpg" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="h-100">
-                                    <a href="img/gallery-images/2-s.png" data-lightbox="gallery">
-                                        <img src="img/gallery-images/2-s.png" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="h-100">
-                                    <a href="img/gallery-images/3-s.png" data-lightbox="gallery">
-                                        <img src="img/gallery-images/3-s.png" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="h-100">
-                                    <a href="img/gallery-images/4-s.png" data-lightbox="gallery">
-                                        <img src="img/gallery-images/4-s.png" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="h-100">
-                                    <a href="img/gallery-images/5-s.png" data-lightbox="gallery">
-                                        <img src="img/gallery-images/5-s.png" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="h-100">
-                                    <a href="img/gallery-images/6-s.png" data-lightbox="gallery">
-                                        <img src="img/gallery-images/6-s.png" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="h-100">
-                                    <a href="img/gallery-images/7-s.png" data-lightbox="gallery">
-                                        <img src="img/gallery-images/7-s.png" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="h-100">
-                                    <a href="img/gallery-images/8-s.png" data-lightbox="gallery">
-                                        <img src="img/gallery-images/8-s.png" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            
-                            <!-- Repeat for other images -->
-                        </div>
-                    </div>
-    
-                    <!-- Artificial Grass Tab -->
-                    <div id="GalleryTab-5" class="tab-pane fade p-0 gallery-section" style="display: none;">
-                        <div class="row g-2">
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class=" h-100">
-                                    <a href="img/gallery-images/1-ag.png" data-lightbox="gallery">
-                                    <img src="images/turf1.jpg" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class=" h-100">
-                                    <a href="img/gallery-images/2-ag.png" data-lightbox="gallery">
-                                    <img src="img/gallery-images/2-ag.png" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class=" h-100">
-                                    <a href="img/gallery-images/3-ag.png" data-lightbox="gallery">
-                                    <img src="img/gallery-images/3-ag.png" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class=" h-100">
-                                    <a href="img/gallery-images/4-ag.png" data-lightbox="gallery">
-                                    <img src="img/gallery-images/4-ag.png" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class=" h-100">
-                                    <a href="img/gallery-images/5-ag.png" data-lightbox="gallery">
-                                    <img src="img/gallery-images/5-ag.png" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class=" h-100">
-                                    <a href="img/gallery-images/6-ag.png" data-lightbox="gallery">
-                                    <img src="img/gallery-images/6-ag.png" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class=" h-100">
-                                    <a href="img/gallery-images/7-ag.png" data-lightbox="gallery">
-                                    <img src="img/gallery-images/7-ag.png" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class=" h-100">
-                                    <a href="img/gallery-images/8-ag.png" data-lightbox="gallery">
-                                    <img src="img/gallery-images/8-ag.png" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- Repeat for other videos -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Video Gallery End -->
 <style>
-  .gallery-section.active {
-display: block;
+  .services-slider .owl-nav{
+    position: absolute;
+    top: 40%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
   }
-  .gallery-section {
-    display: none;
+  .services-slider .owl-nav button.owl-prev{
+    /* position: static;
+  right: 0 !important; */
+  background-color: var(--primary);
+  color: var(--light);
+  margin-left: -1rem;
+  border-radius: 0.5rem;
+  }
+  .services-slider .owl-nav button.owl-next{
+    /* position: static;
+  left: 0 !important; */
+  background-color: var(--primary);
+  color: var(--light);
+  margin-right: -1rem;
+  border-radius: 0.5rem;
+  }
+  .services-slider .owl-nav button.owl-prev i{
+    padding: 0.5rem 1rem;
+   
+  }
+  .services-slider .owl-nav button.owl-next i{
+    padding: 0.5rem 1rem;
+    
   }
 </style>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const tabs = document.querySelectorAll('.nav-item a');
-    const sections = document.querySelectorAll('.gallery-section');
 
-    tabs.forEach(tab => {
-        tab.addEventListener('click', function (e) {
-            e.preventDefault();
+  <div class="container gallery-container">
+    <div class="pagination">
+      <a href="#" class="prev-page">&laquo;</a>
+      <a href="#" class="page-num active">Wallpapers</a>
+      <a href="#" class="page-num">Blinds</a>
+      <a href="#" class="page-num">Curtains</a>
+      <a href="#" class="page-num">Artificial Grass</a>
+      
+      <a href="#" class="next-page">&raquo;</a>
+    </div>
+    <div class="gallery">
+      <!-- Gallery items will be dynamically inserted here -->
+      <div class="gallery-item wow fadeInUpBig animate__animated">
+        <img src="/images/wallpaper-roll1.jpg" alt="Gallery Image 1">
+      </div>
+      <div class="gallery-item wow zoomInUp animate__animated">
+        <img src="images/wallpaper-roll2.jpg" alt="Gallery Image 2">
+      </div>
+      <div class="gallery-item wow zoomInUp animate__animated">
+        <img src="images/wallpaper-roll3.jpg" alt="Gallery Image 3">
+      </div>
+      <div class="gallery-item wow zoomIn animate__animated">
+        <img src="images/wallpaper-roll4.jpg" alt="Gallery Image 4">
+      </div>
+      <div class="gallery-item wow zoomIn">
+        <img src="images/wallpaper-roll5.jpg" alt="Gallery Image 5">
+      </div>
+      <div class="gallery-item wow zoomIn">
+        <img src="images/wallpaper-roll6.jpg" alt="Gallery Image 6">
+      </div>
+      <div class="gallery-item wow zoomIn">
+        <img src="images/roman-blinds.jpg" alt="Gallery Image 1">
+      </div>
+      <div class="gallery-item wow zoomIn">
+        <img src="images/Zebra Blinds.jpg" alt="Gallery Image 2">
+      </div>
+      <div class="gallery-item wow zoomIn">
+        <img src="images/wooden-blinds.jpg" alt="Gallery Image 3">
+      </div>
+      <div class="gallery-item wow zoomIn">
+        <img src="images/ROLLER BLINDS.jpg" alt="Gallery Image 4">
+      </div>
+      <div class="gallery-item wow zoomIn">
+        <img src="images/Venetian Blinds.jpg" alt="Gallery Image 5">
+      </div>
+      <div class="gallery-item wow zoomIn">
+        <img src="images/rollerblinds/img101.jpg" alt="Gallery Image 6">
+      </div>
+      <div class="gallery-item wow zoomIn">
+        <img src="images/curtains/img10.jpg" alt="Gallery Image 5">
+      </div>
+      <div class="gallery-item wow zoomIn">
+        <img src="images/curtains/img102.jpg" alt="Gallery Image 6">
+      </div>
+      <div class="gallery-item wow zoomIn">
+        <img src="images/curtains/img105.jpg" alt="Gallery Image 1">
+      </div>
+      <div class="gallery-item wow zoomIn">
+        <img src="images/curtains/img108.jpg" alt="Gallery Image 2">
+      </div>
+      <div class="gallery-item wow zoomIn">
+        <img src="images/curtains/img111.jpg" alt="Gallery Image 3">
+      </div>
+      <div class="gallery-item wow zoomIn">
+        <img src="images/curtains/img114.jpg" alt="Gallery Image 4">
+      </div>
+      <div class="gallery-item wow zoomIn">
+        <img src="images/turf1.jpg" alt="Gallery Image 5">
+      </div>
+      <div class="gallery-item wow zoomIn">
+        <img src="images/turf2.jpg" alt="Gallery Image 6">
+      </div>
+      <div class="gallery-item wow zoomIn">
+        <img src="images/turf3.jpg" alt="Gallery Image 3">
+      </div>
+      <div class="gallery-item wow zoomIn">
+        <img src="images/turf4.jpg" alt="Gallery Image 4">
+      </div>
+      <div class="gallery-item wow zoomIn">
+        <img src="images/turf5.jpg" alt="Gallery Image 5">
+      </div>
+      <div class="gallery-item wow zoomIn">
+        <img src="images/turf6.jpg" alt="Gallery Image 6">
+      </div>
+    </div>
+  </div>
+  
 
-            // Hide all sections
-            sections.forEach(section => section.style.display = 'none');
+  
+  
+  <style>
+    .gallery-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .gallery-item {
+      position: relative;
+      width: calc(33.33% - 20px);
+      margin: 10px;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      animation: fly-in 0.6s ease-in-out;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+    @keyframes fly-in {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .popup-content {
+      position: relative;
+      max-width: 80%;
+      max-height: 80%;
+    }
+    .popup-content img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    .popup .close, .popup .prev, .popup .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      font-size: 2em;
+      cursor: pointer;
+      z-index: 1001;
+    }
+    .popup .close {
+      top: 20px;
+      right: 20px;
+      transform: translateY(0);
+    }
+    .popup .prev {
+      left: 10px;
+    }
+    .popup .next {
+      right: 10px;
+    }
+    .pagination {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .pagination a {
+      color: #333;
+      padding: 8px 16px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+      margin: 0 2px;
+    }
+    .pagination a.active {
+      background-color: var(--primary);
+      color: white;
+    }
+    .pagination a:hover:not(.active) {
+      background-color: #ddd;
+    }
+    @media (max-width: 768px) {
+      .gallery-item {
+        width: calc(50% - 20px);
+      }
+    }
+    @media (max-width: 576px) {
+      .gallery-item {
+        width: calc(100% - 20px);
+      }
+    }
+  </style>
+  
+  <script>
+   
+  </script>
 
-            // Remove active class from all tabs
-            tabs.forEach(item => item.classList.remove('active'));
 
-            // Show the current section and add active class to the current tab
-            const targetSection = document.querySelector(this.getAttribute('href'));
-            targetSection.style.display = 'block';
-            this.classList.add('active');
-        });
-    });
-});
 
-</script>
+
 
   <!-- who section start -->
   <div class="who_section layout_padding">
@@ -1201,16 +1162,7 @@ display: block;
     </div>
   </div>
   <!-- who section end -->
-<style>
-  
-.tab-content>.tab-pane {
-    display: none
-}
 
-.tab-content>.active {
-    display: block
-}
-</style>
   <!-- projects section start -->
   <div class="projects_section layout_padding">
     <div class="container">
