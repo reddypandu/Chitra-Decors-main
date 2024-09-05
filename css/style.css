@@ -216,7 +216,7 @@ button {
 }
 
 .layout_padding {
-  padding-top: 40px;
+  /* padding-top: 40px; */
   padding-bottom: 0px;
 }
 
@@ -230,8 +230,10 @@ button {
   /* background-image: url(../images/header-bg.png); */
   height: auto;
   background-size: 100%;
-  background-color: maroon;
+  /* background-color: maroon; */
   box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.644);
+  position: fixed;
+  z-index: 999;
 }
 .bg-light {
   background-color: transparent !important;
@@ -538,14 +540,14 @@ li.drop-down1 .drop-items1 li {
   float: left;
 }
 .banner_section {
-  width: 100%;
+  /* width: 100%;
   float: left;
   background-image: url(../images/sofa\ .jpeg);
 
   height: auto;
   padding-bottom: 50px;
   background-size: 100%;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 .whatsapp {
   position: fixed;
@@ -730,7 +732,7 @@ h3.title-style span {
 .contact_bt {
   width: 100%;
   float: left;
-  margin-top: 360px;
+  margin-top: 2rem;
 }
 .contact_bt a {
   width: 100%;
