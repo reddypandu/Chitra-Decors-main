@@ -534,7 +534,7 @@ li.drop-down1 .drop-items1 li {
   color: #ffb607;
 }
 .navbar-nav{
-  background: radial-gradient(#fff 50%,var(--secondary) 90%);
+  background: radial-gradient(#fff 50%,var(--primary) 90%);
   margin-right: 3rem;
 }
 .navbar-expand-lg .navbar-nav .nav-link {
