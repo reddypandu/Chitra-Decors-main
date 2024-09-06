@@ -101,7 +101,7 @@
   </style>
   <!--whatsup end-->
   <!-- header section start -->
-  <div class="header_section" id="header_section">
+  <div class="header_section services" id="header_section">
     <div class="container-fluid">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="logo">
@@ -112,7 +112,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
+          <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a class="nav-link" href="/">Home</a>
             </li>
@@ -159,7 +159,7 @@
               <a class="nav-link" href="./contact.html">Contact</a>
             </li>
           </ul>
-          <form class="form-inline mr-5">
+          <form class="form-inline">
             <i class="fa fa-phone" aria-hidden="true" style="color: white;margin-right: 5px;font-size: 20px;"></i>
             <a href="tel:+917337511766">
               <h1 class="call_text">
@@ -177,8 +177,13 @@
     </div>
   </div>
   <!-- header section end -->
+   <style>
+    .header_section.services{
+  background-color: var(--primary);
+}
+   </style>
   <!-- client section start -->
-  <div class="clients_section layout_padding">
+  <div class="clients_section services">
     <div class="container">
       <h1 class="client_text">What You Get at chithra Decors</h1>
       <p class="many_taital">
@@ -227,7 +232,11 @@
       </div>
     </div>
   </div>
-
+<style>
+  .clients_section.services{
+    padding-top: 10rem;
+  }
+</style>
   <!-- client section end -->
   <!-- services section start -->
   <section class="w3l-homeblock1 py-5" id="about">

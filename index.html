@@ -113,7 +113,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
+          <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a class="nav-link active" href="/">Home</a>
             </li>
@@ -163,7 +163,8 @@
             </li>
           </ul>
           <form class="form-inline ">
-            <i class="fa fa-phone" aria-hidden="true" style="color: white;margin-right: 5px;font-size: 20px;"></i>
+            <img src="/images/animations/contact1.gif" alt="">
+            <!-- <i class="fa fa-phone" aria-hidden="true" style="color: white;margin-right: 5px;font-size: 20px;"></i> -->
             <a href="tel:+917337511766">
               <h1 class="call_text">
                 73375 11766
@@ -180,7 +181,11 @@
     </div>
   </div>
 
-
+<style>
+  .form-inline img{
+    width: 40px;
+  }
+</style>
   <!-- header section end -->
   <!-- banner section start -->
   <div class="banner_section layout_padding">
@@ -254,13 +259,16 @@ height: 100vh;
 background-position: center;
 background-size: cover;
 overflow-x: hidden;
+animation: slideBg1 10s linear infinite;
 }
+
 .banner_section .container .carousel-item.bg2{
 background: url(/images/hero-images/bg-1\ \(2\).jpg);
 height: 100vh;
 background-size: cover;
 background-position: center;
 overflow-x: hidden;
+animation: slideBg2 10s linear infinite;
 }
 .banner_section .container .carousel-item.bg3{
 background: url(/images/hero-images/bg-1\ \(3\).jpg);
@@ -268,6 +276,46 @@ height: 100vh;
 background-size: cover;
 background-position: center;
 overflow-x: hidden;
+animation: slideBg3 10s linear infinite;
+}
+@keyframes slideBg1{
+  0% {
+        /* background-position: 0 100%; */
+        transform: scale(1);
+      }
+      100% {
+        /* background-position: 100% 0; */
+        transform: scale(1);
+      }
+      50%{
+        transform: scale(1.1);
+      }
+}
+@keyframes slideBg2{
+  0% {
+        /* background-position: 0 100%; */
+        transform: scale(1);
+      }
+      100% {
+        /* background-position: 100% 0; */
+        transform: scale(1);
+      }
+      50%{
+        transform: scale(1.1);
+      }
+}
+@keyframes slideBg3{
+  0% {
+        /* background-position: 0 100%; */
+        transform: scale(1);
+      }
+      100% {
+        /* background-position: 100% 0; */
+        transform: scale(1);
+      }
+      50%{
+        transform: scale(1.1);
+      }
 }
 </style>
 
@@ -288,10 +336,11 @@ overflow-x: hidden;
     justify-content: space-around;
     width: 100%;
   }
+.animate img{
 
-  .animate img:first-child {
-    position: absolute; /* Set position to absolute to animate correctly */
-  }
+  width: 80px;
+}
+ 
 
   .animate img:first-child {
     animation: ani1 10s ease-in-out infinite alternate; /* Changed to alternate to move back and forth */
@@ -303,7 +352,7 @@ overflow-x: hidden;
     left: 40%;
     }
     to {
-      bottom: 1000px; /* Moves upwards by 100px */
+      bottom: 1000px; 
     }
   }
 </style>
@@ -491,7 +540,10 @@ overflow-x: hidden;
     border-radius: 2rem;
     transition: all 1s;
 }
+.services_section .col-lg-6{
 
+margin-bottom: 2rem;
+}
 .hover-img {
     width: 100%;
     height: 400px;
@@ -825,7 +877,7 @@ Chithra Decors transforms walls into captivating art with a curated collection o
           </div>
           <div class="col-md-12">
             <div class="container_main">
-              <img src="images/PUFFI/0fefec52d3608c0856a999ff1d489e4d.jpg" alt="Avatar" class="image" />
+              <img src="images/Chairs/111664.jpg" alt="Avatar" class="image" />
              
             </div>
             <h3 class="title-style mb-3"> <span>Luxury Chairs</span></h3>
@@ -838,7 +890,7 @@ Chithra Decors offers luxury high chairs that blend comfort and elegance, transf
           </div>
           <div class="col-md-12">
             <div class="container_main">
-              <img src="images/PUFFI/0fefec52d3608c0856a999ff1d489e4d.jpg" alt="Avatar" class="image" />
+              <img src="images/Tables/0bc52aea9d073cff0a8e346488ddc606.jpg" alt="Avatar" class="image" />
              
             </div>
             <h3 class="title-style mb-3"> <span>Central Tables</span></h3>
@@ -850,7 +902,7 @@ Chithra Decors offers exquisite central tables that combine timeless elegance wi
           </div>
           <div class="col-md-12">
             <div class="container_main">
-              <img src="images/PUFFI/0fefec52d3608c0856a999ff1d489e4d.jpg" alt="Avatar" class="image" />
+              <img src="images/turf1.jpg" alt="Avatar" class="image" />
              
             </div>
             <h3 class="title-style mb-3"> <span>Artificial Turfs</span></h3>
@@ -862,7 +914,7 @@ Chithra Decors offers exquisite central tables that combine timeless elegance wi
           </div>
           <div class="col-md-12">
             <div class="container_main">
-              <img src="images/PUFFI/0fefec52d3608c0856a999ff1d489e4d.jpg" alt="Avatar" class="image" />
+              <img src="images/curtains/img10.jpg" alt="Avatar" class="image" />
              
             </div>
             <h3 class="title-style mb-3"> <span>Curtains</span></h3>
@@ -874,7 +926,7 @@ Chithra Decors offers exquisite central tables that combine timeless elegance wi
           </div>
           <div class="col-md-12">
             <div class="container_main">
-              <img src="images/PUFFI/0fefec52d3608c0856a999ff1d489e4d.jpg" alt="Avatar" class="image" />
+              <img src="images/HEADBOARD/img187.jpg" alt="Avatar" class="image" />
              
             </div>
             <h3 class="title-style mb-3"> <span>Head Boards</span></h3>
@@ -886,7 +938,7 @@ Chithra Decors offers exquisite central tables that combine timeless elegance wi
           </div>
           <div class="col-md-12">
             <div class="container_main">
-              <img src="images/PUFFI/0fefec52d3608c0856a999ff1d489e4d.jpg" alt="Avatar" class="image" />
+              <img src="images/longers/img103.jpg" alt="Avatar" class="image" />
              
             </div>
             <h3 class="title-style mb-3"> <span>Longers</span></h3>
@@ -898,7 +950,7 @@ Chithra Decors offers a premium Longers collection that combines comfort and sty
           </div>
           <div class="col-md-12">
             <div class="container_main">
-              <img src="images/PUFFI/0fefec52d3608c0856a999ff1d489e4d.jpg" alt="Avatar" class="image" />
+              <img src="images/wall-decors/img25.jpg" alt="Avatar" class="image" style="object-fit: fill;" />
              
             </div>
             <h3 class="title-style mb-3"><span>Wall Decors</span></h3>
@@ -910,7 +962,7 @@ Chithra Decors presents an extensive Wall Decors collection that blends art and 
           </div>
           <div class="col-md-12">
             <div class="container_main">
-              <img src="images/PUFFI/0fefec52d3608c0856a999ff1d489e4d.jpg" alt="Avatar" class="image" />
+              <img src="images/table-decors/img689.jpg" alt="Avatar" class="image" />
              
             </div>
             <h3 class="title-style mb-3"><span>Table Decors</span></h3>
@@ -1407,8 +1459,8 @@ Chithra Decors presents an extensive Wall Decors collection that blends art and 
                 <div class="row">
 
                   <div class="col-sm-12">
-                    <h1 class="loksans_text">RAJ KUMAR K</h1>
-                    <span class="testi1">&#9679;Politician</span>
+                    <h2 class="loksans_text">RAJ KUMAR K</h2>
+                    <!-- <span class="testi1">Politician</span> -->
                     <p class="dolor_ipsum_text">
                       "Our experience with chithra Decors was nothing short of
                       exceptional! Their attention to detail, creativity, and
@@ -1431,8 +1483,8 @@ Chithra Decors presents an extensive Wall Decors collection that blends art and 
                 <div class="row">
 
                   <div class="col-sm-12">
-                    <h1 class="loksans_text">MAMATHA T</h1>
-                    <span class="testi2">&#9679;Software Engineer</span>
+                    <h2 class="loksans_text">MAMATHA T</h2>
+                    <!-- <span class="testi2">Software Engineer</span> -->
                     <p class="dolor_ipsum_text">
                       "chithra Decors turned our vision into a stunning
                       reality! Their exceptional creativity, personalized
@@ -1456,8 +1508,8 @@ Chithra Decors presents an extensive Wall Decors collection that blends art and 
                 <div class="row">
 
                   <div class="col-sm-12">
-                    <h1 class="loksans_text">RAHEEM MD</h1>
-                    <span class="testi3">&#9679;Business Man</span>
+                    <h2 class="loksans_text">RAHEEM MD</h2>
+                    <!-- <span class="testi3">&#9679;Business Man</span> -->
                     <p class="dolor_ipsum_text">
                       "chithra Decors turned our house into a home, capturing
                       our essence with a perfect blend of style and
@@ -1621,7 +1673,24 @@ Chithra Decors presents an extensive Wall Decors collection that blends art and 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
   <script src="js/custom.js"></script>
   <script src="./script.js"></script>
- <script></script>
+ <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    // Select the header element
+    const header = document.querySelector(".header_section");
+
+    // Add scroll event listener
+    window.addEventListener("scroll", function () {
+      // Check if the scroll position is more than 100px
+      if (window.scrollY > 100) {
+        // Add the class 'active' to the header
+        header.classList.add("active");
+      } else {
+        // Remove the class 'active' when scrolling back to the top
+        header.classList.remove("active");
+      }
+    });
+  });
+ </script>
 </body>
 
 </html>
