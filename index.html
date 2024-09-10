@@ -255,7 +255,7 @@
     padding-block: 5rem;
   }
 .banner_section .container .carousel-item.bg1{
-background: url(/images/hero-images/bg-1\ \(1\).jpg);
+background: url(/images/hero-images/back-hero1.jpg);
 height: 100vh;
 background-position: center;
 background-size: cover;
@@ -264,7 +264,7 @@ animation: slideBg1 10s linear infinite;
 }
 
 .banner_section .container .carousel-item.bg2{
-background: url(/images/hero-images/bg-1\ \(2\).jpg);
+background: url(/images/hero-images/back-hero2.jpg);
 height: 100vh;
 background-size: cover;
 background-position: center;
@@ -272,7 +272,7 @@ overflow-x: hidden;
 animation: slideBg2 10s linear infinite;
 }
 .banner_section .container .carousel-item.bg3{
-background: url(/images/hero-images/bg-1\ \(3\).jpg);
+background: url(/images/hero-images/back-hero3.jpg);
 height: 100vh;
 background-size: cover;
 background-position: center;
@@ -1657,6 +1657,28 @@ Chithra Decors presents an extensive Wall Decors collection that blends art and 
   <!-- client section end -->
   <!-- contact section start -->
 
+<a class="topBtn" href="#">
+  <i class="fa fa-arrow-up"></i>
+</a>
+
+<style>
+  .topBtn{
+    position: fixed;
+    bottom: 6rem;
+    right: 1rem;
+    display: none;
+  }
+  .topBtn i{
+    background-color: var(--primary);
+    color: var(--light);
+    padding: 1rem;
+    border-radius: 3rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+  }
+</style>
+<script>
+  
+</script>
   <!-- contact section end -->
   <!-- footer section start -->
   <div class="footer_section layout_padding">
@@ -1795,6 +1817,7 @@ Chithra Decors presents an extensive Wall Decors collection that blends art and 
     document.addEventListener("DOMContentLoaded", function () {
     // Select the header element
     const header = document.querySelector(".header_section");
+    const topBtn = document.querySelector(".topBtn");
 
     // Add scroll event listener
     window.addEventListener("scroll", function () {
@@ -1802,12 +1825,15 @@ Chithra Decors presents an extensive Wall Decors collection that blends art and 
       if (window.scrollY > 100) {
         // Add the class 'active' to the header
         header.classList.add("active");
+         topBtn.style.display="block"
       } else {
         // Remove the class 'active' when scrolling back to the top
         header.classList.remove("active");
+        topBtn.style.display="none";
       }
     });
   });
+
  </script>
 </body>
 
