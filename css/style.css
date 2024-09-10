@@ -293,7 +293,8 @@ button {
   display: none;
   margin-left: 20px;
   transition: 1s ease-in-out;
-
+/* background: url(/images/background-image1.png);
+background-position: center; */
 }
 
 .nav-item.drop-down .drop-items li {
