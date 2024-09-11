@@ -753,11 +753,11 @@ h3.title-style span {
 @media(max-width:992px){
   .there_text{
     /* padding-inline: 3rem; */
-    width: 40% !important;
+    width: 50% !important;
   }
   .furniture_text{
     /* padding-inline: 3rem; */
-    width: 40% !important;
+    width: 50% !important;
     float: unset;
     margin: 0 auto;
   }
