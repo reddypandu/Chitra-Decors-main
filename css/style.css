@@ -753,11 +753,11 @@ h3.title-style span {
 @media(max-width:992px){
   .there_text{
     /* padding-inline: 3rem; */
-    width: 40%;
+    /* width: 80%; */
   }
   .furniture_text{
     /* padding-inline: 3rem; */
-    width: 40%;
+    /* width: 80%; */
   }
 }
 .contact_bt_main {
