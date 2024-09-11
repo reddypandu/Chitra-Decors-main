@@ -84,12 +84,12 @@
   visibility: hidden;
 }
 .owl-carousel.owl-drag .owl-item {
-  -ms-touch-action: none;
+  /* -ms-touch-action: none;
   touch-action: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none;
+  user-select: none; */
 }
 .owl-carousel.owl-grab {
   cursor: move;
