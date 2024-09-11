@@ -744,10 +744,19 @@ h3.title-style span {
   margin: 0 auto;
   margin-top: 20px;
   font-size: 20px;
+  
   color: var(--fourth);
   text-align: center;
   font-family: Georgia, "Times New Roman", Times, serif;
   /* margin-left: 200px; */
+}
+@media(max-width:992px){
+  .there_text{
+    padding-inline: 3rem;
+  }
+  .furniture_text{
+    padding-inline: 3rem;
+  }
 }
 .contact_bt_main {
   width: 17%;
