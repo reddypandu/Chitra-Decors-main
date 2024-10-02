@@ -177,7 +177,7 @@ $(function () {
   });
 
   $(document).ready(function () {
-    var owl = $(".services-slider");
+    var owl = $("#services-slider");
     owl.owlCarousel({
       items: 4,
       loop: true,
