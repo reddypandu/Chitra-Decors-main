@@ -23,6 +23,7 @@
 
     gtag('config', 'G-WXXJPLWRFX');
   </script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11352042064"></script>
   <script>
@@ -227,15 +228,15 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
           <div class="mail_sectin">
 
 
-            <div id="message"></div>
-            <form id="bookingForm" class="row" name="contactform" method="post">
+            <!-- <div id="message"></div> -->
+            <form id="contactForm" class="row" method="post" action="contact-form.php">
               <fieldset class="row-fluid">
                 <input type="text" name="first_name" id="name" class="email-bt" placeholder="First Name" required />
 
                 <input type="email" name="email" id="mail" class="email-bt" placeholder="Your Email" required />
 
-                <input type="text" name="phone" id="number" class="email-bt" placeholder="Phone Number" required />
-                <div class="dropdown-sel">
+                <input type="tel" pattern="^\d{10}$" name="phone" id="number" class="email-bt" placeholder="Phone Number" required />
+                <!-- <div class="dropdown-sel">
                   <span id="selectedCatogery" class="product">Choose a Category</span>
                   <ul id="carList" required class="dropdown-content">
                     <li value="Blinds active">Blinds</li>
@@ -246,19 +247,20 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     <li value="Stools">Stools</li>
                     <li value="Wallpapers">Wallpapers</li>
                   </ul>
-                </div>
+                </div> -->
 
 
-                <textarea class="massage-bt" name="comments" id="comments" rows="6"
+                <textarea class="massage-bt" name="comments" id="message" rows="6"
                   placeholder="Give us more details.."></textarea>
-
+                  <div class="g-recaptcha" data-sitekey="#"></div>
+                  <div id="formMessage"></div>
                 <button type="submit" value="SEND" class="send_bt">
                   Submit
                 </button>
               </fieldset>
-              <p id="thankYouMessage" style="display: none; color: green; padding: 5px">
+              <!-- <p id="thankYouMessage" style="display: none; color: green; padding: 5px">
                 Thank You For Registration! We Will Get to Back You Soon.!
-              </p>
+              </p> -->
             </form>
           </div>
         </div>
@@ -469,6 +471,28 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
     });
   </script>
+  <script>
+    $('#contactForm').on('submit', function (e) {
+e.preventDefault(); // Stop page reload
+
+$.ajax({
+url: 'contact-form.php',
+method: 'POST',
+data: $(this).serialize(),
+success: function (response) {
+  if (response.trim() === "success") {
+      window.location.href = "thank-you"; // Redirect to thank you page
+  } else {
+      $('#formMessage').css('color', 'red').html(response);
+      grecaptcha.reset(); // Reset reCAPTCHA if error
+  }
+},
+error: function () {
+  $('#formMessage').css('color', 'red').html("Something went wrong. Please try again.");
+}
+});
+});
+</script>
 </body>
 
 </html>
