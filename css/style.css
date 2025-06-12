@@ -544,9 +544,9 @@ margin-right: 0;
   }
 }
 .navbar-expand-lg .navbar-nav .nav-link {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin: 3px;
 }
 
 .nav-item {
@@ -1728,13 +1728,13 @@ textarea#comment::placeholder {
   padding-bottom: 60px;
 }
  .blogs.blog_section {
-  padding: 80px 0;
+  padding: 140px 0;
   background-color: #f9f9f9;
   text-align: left;
 }
 
 .blogs.blog_section .our_text {
-  font-size: 36px;
+  font-size: 30px;
   font-weight: 700;
   color: var(--secondary);
  
