@@ -263,7 +263,7 @@
     }
 
     .banner_section .container .carousel-item.bg1 {
-      background: url(./images/hero-images/back-hero1.jpg);
+      background: url(./images/hero-images/mobile1.png);
       height: 100vh;
       background-position: center;
       background-size: cover;
@@ -288,7 +288,23 @@
       overflow-x: hidden;
       animation: slideBg3 10s linear infinite;
     }
+   @media (min-width: 1200px) {
+  .banner_section .container .carousel-item.bg1 {
+    background-image: url('./images/hero-images/back-heroo1.jpg');
+  }
+}
+   @media (min-width: 768px) {
+  .banner_section .container .carousel-item.bg1 {
+    background-image: url('./images/hero-images/mobile2.png');
+  }
+}
 
+/* Desktop */
+@media (min-width: 480px) {
+  .banner_section .container .carousel-item.bg1 {
+    background-image: url('./images/hero-images/mobile1.png');
+  }
+}
     @keyframes slideBg1 {
       0% {
         /* background-position: 0 100%; */
@@ -1439,7 +1455,7 @@ object-fit: cover;
   <div class="row">
     <div class="col-lg-4 col-md-4">
       <div class="blog_box">
-        <img src="images/blogs/3.png" alt="Chitra Decors - Interior Design & Furniture" class="img-fluid">
+        <img src="images/blogs/3.webp" alt="Chitra Decors - Interior Design & Furniture" class="img-fluid">
         <a href="interiors-blog.html">
         <h3>Redefining Interiors with Chitra Decors in Hyderabad</h3>
         </a>
@@ -1450,7 +1466,7 @@ object-fit: cover;
     </div>
     <div class="col-lg-4 col-md-4">
       <div class="blog_box">
-        <img src="images/blogs/2.png" alt="Sofa & Living Room Furniture Hyderabad" class="img-fluid">
+        <img src="images/blogs/2.webp" alt="Sofa & Living Room Furniture Hyderabad" class="img-fluid">
         <a href="sofa-livingroom-blog.html">
         <h3>Find the Best Sofa & Living Room Furniture in Hyderabad</h3>
         </a>
